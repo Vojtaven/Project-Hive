@@ -1,0 +1,84 @@
+\doxysection{D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/\+Game\+Engine.h File Reference}
+\hypertarget{_game_engine_8h}{}\label{_game_engine_8h}\index{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/GameEngine.h@{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/GameEngine.h}}
+
+
+Contains class with the main logic of the game.  
+
+
+{\ttfamily \#include "{}bug\+Tiles.\+h"{}}\newline
+{\ttfamily \#include "{}common.\+h"{}}\newline
+{\ttfamily \#include "{}hex\+Utilities.\+h"{}}\newline
+{\ttfamily \#include "{}Player.\+h"{}}\newline
+{\ttfamily \#include "{}raylib.\+h"{}}\newline
+{\ttfamily \#include "{}raymath.\+h"{}}\newline
+{\ttfamily \#include "{}Renderer.\+h"{}}\newline
+{\ttfamily \#include "{}rlgl.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_engine}{Game\+Engine}}
+\begin{DoxyCompactList}\small\item\em Represents the game engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1}{Game\+Status}} \{ \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a1e23852820b9154316c7c06e2b7ba051}{NORMAL}}
+, \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a2b4807f24940ca2fe73284bc6e864d66}{DRAW}}
+, \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a0c195e8068b6ca55bc8779549ce6658c}{FIRST\+\_\+\+PLAYER\+\_\+\+WON}}
+, \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a95beb4e47ae6f912cd21a7fec20de943}{SECOND\+\_\+\+PLAYER\+\_\+\+WON}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the status of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains class with the main logic of the game. 
+
+\begin{DoxyAuthor}{Author}
+Vojtech Venzara (\href{mailto:Vojtaven@seznam.cz}{\texttt{ Vojtaven@seznam.\+cz}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/04-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1}\label{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1} 
+\index{GameEngine.h@{GameEngine.h}!GameStatus@{GameStatus}}
+\index{GameStatus@{GameStatus}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{GameStatus}{GameStatus}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1}{Game\+Status}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration representing the status of the game. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!GameEngine.h@{GameEngine.h}}\index{GameEngine.h@{GameEngine.h}!NORMAL@{NORMAL}}}\Hypertarget{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a1e23852820b9154316c7c06e2b7ba051}\label{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a1e23852820b9154316c7c06e2b7ba051} 
+NORMAL&Normal state of the game. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DRAW@{DRAW}!GameEngine.h@{GameEngine.h}}\index{GameEngine.h@{GameEngine.h}!DRAW@{DRAW}}}\Hypertarget{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a2b4807f24940ca2fe73284bc6e864d66}\label{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a2b4807f24940ca2fe73284bc6e864d66} 
+DRAW&The game ended in a draw. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIRST\_PLAYER\_WON@{FIRST\_PLAYER\_WON}!GameEngine.h@{GameEngine.h}}\index{GameEngine.h@{GameEngine.h}!FIRST\_PLAYER\_WON@{FIRST\_PLAYER\_WON}}}\Hypertarget{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a0c195e8068b6ca55bc8779549ce6658c}\label{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a0c195e8068b6ca55bc8779549ce6658c} 
+FIRST\+\_\+\+PLAYER\+\_\+\+WON&The first player won the game. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SECOND\_PLAYER\_WON@{SECOND\_PLAYER\_WON}!GameEngine.h@{GameEngine.h}}\index{GameEngine.h@{GameEngine.h}!SECOND\_PLAYER\_WON@{SECOND\_PLAYER\_WON}}}\Hypertarget{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a95beb4e47ae6f912cd21a7fec20de943}\label{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a95beb4e47ae6f912cd21a7fec20de943} 
+SECOND\+\_\+\+PLAYER\+\_\+\+WON&The second player won the game. \\
+\hline
+
+\end{DoxyEnumFields}

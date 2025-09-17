@@ -1,0 +1,223 @@
+\doxysection{Renderer Class Reference}
+\hypertarget{class_renderer}{}\label{class_renderer}\index{Renderer@{Renderer}}
+
+
+Manages rendering of the game elements.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}{Renderer}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_renderer}{Renderer} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_af5b95c82bf35864d48d4a6709ab21abe}{Render\+Base\+Layout}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&map, const \mbox{\hyperlink{class_player}{Player}} players\mbox{[}2\mbox{]}, const int id\+Of\+Player\+On\+Turn)
+\begin{DoxyCompactList}\small\item\em Renders the base layout of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \mbox{\hyperlink{class_renderer_a3bb044c6811d69150b8417511e87985d}{Find\+Cords\+Of\+Hex\+Under\+Cursor}} () const
+\begin{DoxyCompactList}\small\item\em Finds the coordinates of the hex tile under the cursor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_renderer_ad33711f54e68c5fd5aa6e1edf5923bbe}{Get\+Hexagon\+Horizontal\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the count of hexagons horizontally based on hexagon size and screen size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_renderer_a0a7388e773442e5959092b022ec030f5}{Is\+Mouse\+In\+Players\+Fields}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the mouse cursor is in the players\textquotesingle{} fields. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_renderer_a6f058e65f4abd93bf1888b2ffaeb8c37}{Get\+Index\+Of\+Hex\+In\+Player\+Field}} (int player\+Id)
+\begin{DoxyCompactList}\small\item\em Gets the index of the hex tile in the player\textquotesingle{}s field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a29504288a1bf1ddaffec069f1d7a88c5}{Render\+Players}} (const \mbox{\hyperlink{class_player}{Player}} players\mbox{[}2\mbox{]}, const int id\+Of\+Player\+On\+Turn)
+\begin{DoxyCompactList}\small\item\em Renders the players on the game screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_abde0f10662da0479ccd82790611a993b}{High\+Light\+Selected\+Hex}} (std\+::variant$<$ std\+::pair$<$ int, int $>$, \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} $>$ selected\+Hex)
+\begin{DoxyCompactList}\small\item\em Highlights the selected hex tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a8eaf033eb96176eda40d2aa46fa96175}{High\+Light\+Possible\+Moves}} (const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves)
+\begin{DoxyCompactList}\small\item\em Highlights the possible moves on the game map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a8479b846a935a1e3298af69b64c6c3c6}{Display\+Queen\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Displays a message indicating the requirement to place the Queen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a1dd6d7ab610b2694029ce35bc5683f85}{Display\+Centered\+Text\+Baner}} (const std\+::string \&message, const int font\+\_\+size=\mbox{\hyperlink{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51}{FONT\+\_\+\+SIZE}})
+\begin{DoxyCompactList}\small\item\em Displays a centered text banner on the game screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages rendering of the game elements. 
+
+The \doxylink{class_renderer}{Renderer} class handles rendering of various game elements such as the game map, players, hex tiles, messages, and other UI components. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}\label{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_renderer}{Renderer} object. 
+
+Constructs a \doxylink{class_renderer}{Renderer} object and initializes rendering parameters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_renderer_a1dd6d7ab610b2694029ce35bc5683f85}\label{class_renderer_a1dd6d7ab610b2694029ce35bc5683f85} 
+\index{Renderer@{Renderer}!DisplayCenteredTextBaner@{DisplayCenteredTextBaner}}
+\index{DisplayCenteredTextBaner@{DisplayCenteredTextBaner}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{DisplayCenteredTextBaner()}{DisplayCenteredTextBaner()}}
+{\footnotesize\ttfamily void Renderer\+::\+Display\+Centered\+Text\+Baner (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const int}]{font\+\_\+size = {\ttfamily \mbox{\hyperlink{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51}{FONT\+\_\+\+SIZE}}} }\end{DoxyParamCaption})}
+
+
+
+Displays a centered text banner on the game screen. 
+
+Displays a centered text banner with the specified message on the game screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display in the banner. \\
+\hline
+{\em font\+\_\+size} & The font size of the text (optional, defaults to FONT\+\_\+\+SIZE). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_renderer_a8479b846a935a1e3298af69b64c6c3c6}\label{class_renderer_a8479b846a935a1e3298af69b64c6c3c6} 
+\index{Renderer@{Renderer}!DisplayQueenMessage@{DisplayQueenMessage}}
+\index{DisplayQueenMessage@{DisplayQueenMessage}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{DisplayQueenMessage()}{DisplayQueenMessage()}}
+{\footnotesize\ttfamily void Renderer\+::\+Display\+Queen\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays a message indicating the requirement to place the Queen. 
+
+Displays a message on the game screen indicating that the player must place the Queen. \Hypertarget{class_renderer_a3bb044c6811d69150b8417511e87985d}\label{class_renderer_a3bb044c6811d69150b8417511e87985d} 
+\index{Renderer@{Renderer}!FindCordsOfHexUnderCursor@{FindCordsOfHexUnderCursor}}
+\index{FindCordsOfHexUnderCursor@{FindCordsOfHexUnderCursor}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{FindCordsOfHexUnderCursor()}{FindCordsOfHexUnderCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} Renderer\+::\+Find\+Cords\+Of\+Hex\+Under\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Finds the coordinates of the hex tile under the cursor. 
+
+\begin{DoxyReturn}{Returns}
+The coordinates of the hex tile under the cursor. 
+\end{DoxyReturn}
+\Hypertarget{class_renderer_ad33711f54e68c5fd5aa6e1edf5923bbe}\label{class_renderer_ad33711f54e68c5fd5aa6e1edf5923bbe} 
+\index{Renderer@{Renderer}!GetHexagonHorizontalCount@{GetHexagonHorizontalCount}}
+\index{GetHexagonHorizontalCount@{GetHexagonHorizontalCount}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetHexagonHorizontalCount()}{GetHexagonHorizontalCount()}}
+{\footnotesize\ttfamily int Renderer\+::\+Get\+Hexagon\+Horizontal\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the count of hexagons horizontally based on hexagon size and screen size. 
+
+\begin{DoxyReturn}{Returns}
+The count of hexagons horizontally on the game map. 
+\end{DoxyReturn}
+\Hypertarget{class_renderer_a6f058e65f4abd93bf1888b2ffaeb8c37}\label{class_renderer_a6f058e65f4abd93bf1888b2ffaeb8c37} 
+\index{Renderer@{Renderer}!GetIndexOfHexInPlayerField@{GetIndexOfHexInPlayerField}}
+\index{GetIndexOfHexInPlayerField@{GetIndexOfHexInPlayerField}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetIndexOfHexInPlayerField()}{GetIndexOfHexInPlayerField()}}
+{\footnotesize\ttfamily int Renderer\+::\+Get\+Index\+Of\+Hex\+In\+Player\+Field (\begin{DoxyParamCaption}\item[{int}]{player\+Id }\end{DoxyParamCaption})}
+
+
+
+Gets the index of the hex tile in the player\textquotesingle{}s field. 
+
+Retrieves the index of the hex tile in the player field based on the player ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Id} & The ID of the player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the hex tile in the player\textquotesingle{}s field or -\/1 if no hex is under cursor 
+\end{DoxyReturn}
+\Hypertarget{class_renderer_a8eaf033eb96176eda40d2aa46fa96175}\label{class_renderer_a8eaf033eb96176eda40d2aa46fa96175} 
+\index{Renderer@{Renderer}!HighLightPossibleMoves@{HighLightPossibleMoves}}
+\index{HighLightPossibleMoves@{HighLightPossibleMoves}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{HighLightPossibleMoves()}{HighLightPossibleMoves()}}
+{\footnotesize\ttfamily void Renderer\+::\+High\+Light\+Possible\+Moves (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+Moves }\end{DoxyParamCaption})}
+
+
+
+Highlights the possible moves on the game map. 
+
+Highlights the possible moves on the game map based on the provided set of possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em possible\+Moves} & The set of possible moves to highlight. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_renderer_abde0f10662da0479ccd82790611a993b}\label{class_renderer_abde0f10662da0479ccd82790611a993b} 
+\index{Renderer@{Renderer}!HighLightSelectedHex@{HighLightSelectedHex}}
+\index{HighLightSelectedHex@{HighLightSelectedHex}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{HighLightSelectedHex()}{HighLightSelectedHex()}}
+{\footnotesize\ttfamily void Renderer\+::\+High\+Light\+Selected\+Hex (\begin{DoxyParamCaption}\item[{std\+::variant$<$ std\+::pair$<$ int, int $>$, \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} $>$}]{selected\+Hex }\end{DoxyParamCaption})}
+
+
+
+Highlights the selected hex tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected\+Hex} & A variant representing the player and piece index or selected hex tile coordinates. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_renderer_a0a7388e773442e5959092b022ec030f5}\label{class_renderer_a0a7388e773442e5959092b022ec030f5} 
+\index{Renderer@{Renderer}!IsMouseInPlayersFields@{IsMouseInPlayersFields}}
+\index{IsMouseInPlayersFields@{IsMouseInPlayersFields}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{IsMouseInPlayersFields()}{IsMouseInPlayersFields()}}
+{\footnotesize\ttfamily bool Renderer\+::\+Is\+Mouse\+In\+Players\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the mouse cursor is in the players\textquotesingle{} fields. 
+
+\begin{DoxyReturn}{Returns}
+True if the mouse cursor is in the players\textquotesingle{} fields, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_renderer_af5b95c82bf35864d48d4a6709ab21abe}\label{class_renderer_af5b95c82bf35864d48d4a6709ab21abe} 
+\index{Renderer@{Renderer}!RenderBaseLayout@{RenderBaseLayout}}
+\index{RenderBaseLayout@{RenderBaseLayout}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{RenderBaseLayout()}{RenderBaseLayout()}}
+{\footnotesize\ttfamily void Renderer\+::\+Render\+Base\+Layout (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{map,  }\item[{const \mbox{\hyperlink{class_player}{Player}}}]{players\mbox{[}2\mbox{]},  }\item[{const int}]{id\+Of\+Player\+On\+Turn }\end{DoxyParamCaption})}
+
+
+
+Renders the base layout of the game. 
+
+Renders the base layout of the game, including the game map, players, and other elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em players} & An array containing the players in the game. \\
+\hline
+{\em id\+Of\+Player\+On\+Turn} & The ID of the player currently on turn. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_renderer_a29504288a1bf1ddaffec069f1d7a88c5}\label{class_renderer_a29504288a1bf1ddaffec069f1d7a88c5} 
+\index{Renderer@{Renderer}!RenderPlayers@{RenderPlayers}}
+\index{RenderPlayers@{RenderPlayers}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{RenderPlayers()}{RenderPlayers()}}
+{\footnotesize\ttfamily void Renderer\+::\+Render\+Players (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_player}{Player}}}]{players\mbox{[}2\mbox{]},  }\item[{const int}]{id\+Of\+Player\+On\+Turn }\end{DoxyParamCaption})}
+
+
+
+Renders the players on the game screen. 
+
+Renders the players on the game screen, including their names, pieces etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em players} & An array containing the players in the game. \\
+\hline
+{\em id\+Of\+Player\+On\+Turn} & The ID of the player currently on turn. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/\mbox{\hyperlink{_renderer_8h}{Renderer.\+h}}\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/Renderer.\+cpp\end{DoxyCompactItemize}

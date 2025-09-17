@@ -1,0 +1,168 @@
+\doxysection{Beetle Class Reference}
+\hypertarget{class_beetle}{}\label{class_beetle}\index{Beetle@{Beetle}}
+Inheritance diagram for Beetle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_beetle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_beetle_ada49e48944c2a8d7202d9cfc513b899e}{Beetle}} (const int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}}, const Color color=\mbox{\hyperlink{common_8h_a2eb27e3d7a1a28d417b80588b2efcfe5}{BEETLE\+\_\+\+COLOR}}, const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}=\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a5947a2c004c7aee6dbfd803326a0fa5b}{bug\+Type\+::\+BEETLE}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_beetle}{Beetle} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_beetle_ab63c1492746ba402a5325384e2099f9f}{\texorpdfstring{$\sim$}{\string~}\+Beetle}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor for \doxylink{class_beetle}{Beetle}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_beetle_a9402ccc5c161e136ea96db9dc5e96a7a}{Move}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&original\+Cords)
+\begin{DoxyCompactList}\small\item\em Define rules for moving the \doxylink{class_beetle}{Beetle} tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_beetle_ae91c2cc41262a70d4d7c95ac711b5331}{Set\+Tile\+Under\+Beetle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}} $>$ tile)
+\begin{DoxyCompactList}\small\item\em Sets the tile under the \doxylink{class_beetle}{Beetle}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}} $>$ \mbox{\hyperlink{class_beetle_a432c662c12d9898c892b7642d29998d7}{Get\+Tile\+Under\+Beetle}} ()
+\begin{DoxyCompactList}\small\item\em Gets the tile under the \doxylink{class_beetle}{Beetle}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_bug_tile_a961a2a9c008e9d9b74d2196af5a58f01}{Base\+Bug\+Tile}} (const int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}}, const Color color, const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_base_bug_tile}{Base\+Bug\+Tile} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_base_bug_tile_a85abaea5f923ef07feb230f514ce4995}{Base\+Bug\+Tile}} ()=delete
+\begin{DoxyCompactList}\small\item\em Deleted default constructor. \end{DoxyCompactList}\item 
+const Color \& \mbox{\hyperlink{class_base_bug_tile_a775d4e32edd60dadcc899949d5f12ffb}{Get\+Bug\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the Bug Color object. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_base_bug_tile_a6fa62549274b32765b93431151580cfd}{Get\+Player\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_player}{Player} ID object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \& \mbox{\hyperlink{class_base_bug_tile_a92313d77aa6ffacac607aa524a549287}{Get\+Bug\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the Bug Type object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a8ffc587c75a51b063d481a6494dad063}{Place}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const int \&IDOf\+Player, const bool \&is\+Zero\+Turn=false)
+\begin{DoxyCompactList}\small\item\em Define rules for placing the bug tile. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_base_bug_tile_a90db1952d30b43b544eee34bf6dd5a89}{\texorpdfstring{$\sim$}{\string~}\+Base\+Bug\+Tile}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_base_bug_tile}{Base\+Bug\+Tile}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_ad25344e2000feb209197c6b3a84bdd14}{Spaces\+Surronded\+By\+Their\+Color}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const int \&IDOf\+Player)
+\begin{DoxyCompactList}\small\item\em Retrieves tiles with atleast one neighbor of same color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_a1b4c4299dd4299b026ece1863dca2d08}{Check\+Integrity\+Of\+Hive\+Without\+One\+Tile}} (\mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Removed\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks the integrity of the hive without one tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_ac58be7526d2048fb6fd6581b3b8dd33e}{Freedom\+To\+Move}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Removed\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks if the bug tile has freedom to move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_aa7fe73915fa896143949de902743f6ba}{Is\+Space\+Surrounded}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks if a tile is surrounded by tiles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a67694e6db79871dc8ad5e63330fcda35}{Remove\+Possible\+Moves\+Around\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Removes possible moves around a tile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \& \mbox{\hyperlink{class_base_bug_tile_a1cc91958c9996e3dec7a30f72341debf}{Remove\+Possible\+Moves\+Around\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Removes possible moves around a tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_a232e1bc33321f410dbc42714ab6b12fa}{Is\+Map\+Clear}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map) const
+\begin{DoxyCompactList}\small\item\em Checks if the game map is clear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}
+\item 
+Color \mbox{\hyperlink{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1}{bug\+Color}} = PINK
+\item 
+int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}} = INT\+\_\+\+MAX
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_beetle_ada49e48944c2a8d7202d9cfc513b899e}\label{class_beetle_ada49e48944c2a8d7202d9cfc513b899e} 
+\index{Beetle@{Beetle}!Beetle@{Beetle}}
+\index{Beetle@{Beetle}!Beetle@{Beetle}}
+\doxysubsubsection{\texorpdfstring{Beetle()}{Beetle()}}
+{\footnotesize\ttfamily Beetle\+::\+Beetle (\begin{DoxyParamCaption}\item[{const int}]{player\+Id,  }\item[{const Color}]{color = {\ttfamily \mbox{\hyperlink{common_8h_a2eb27e3d7a1a28d417b80588b2efcfe5}{BEETLE\+\_\+\+COLOR}}},  }\item[{const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}}}]{type = {\ttfamily \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a5947a2c004c7aee6dbfd803326a0fa5b}{bug\+Type\+::\+BEETLE}}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_beetle}{Beetle} object. 
+
+Constructs a \doxylink{class_beetle}{Beetle} object with the specified player ID, color, and type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Id} & The ID of the player owning the \doxylink{class_beetle}{Beetle} tile. \\
+\hline
+{\em color} & The color of the \doxylink{class_beetle}{Beetle} tile (optional, defaults to BEETLE\+\_\+\+COLOR). \\
+\hline
+{\em type} & The type of bug represented by the tile (optional, defaults to \doxylink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a5947a2c004c7aee6dbfd803326a0fa5b}{bug\+Type\+::\+BEETLE}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_beetle_ab63c1492746ba402a5325384e2099f9f}\label{class_beetle_ab63c1492746ba402a5325384e2099f9f} 
+\index{Beetle@{Beetle}!````~Beetle@{\texorpdfstring{$\sim$}{\string~}Beetle}}
+\index{````~Beetle@{\texorpdfstring{$\sim$}{\string~}Beetle}!Beetle@{Beetle}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Beetle()}{\string~Beetle()}}
+{\footnotesize\ttfamily Beetle\+::\texorpdfstring{$\sim$}{\string~}\+Beetle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor for \doxylink{class_beetle}{Beetle}. 
+
+Defines a default destructor for \doxylink{class_beetle}{Beetle} objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_beetle_a432c662c12d9898c892b7642d29998d7}\label{class_beetle_a432c662c12d9898c892b7642d29998d7} 
+\index{Beetle@{Beetle}!GetTileUnderBeetle@{GetTileUnderBeetle}}
+\index{GetTileUnderBeetle@{GetTileUnderBeetle}!Beetle@{Beetle}}
+\doxysubsubsection{\texorpdfstring{GetTileUnderBeetle()}{GetTileUnderBeetle()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}} $>$ Beetle\+::\+Get\+Tile\+Under\+Beetle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the tile under the \doxylink{class_beetle}{Beetle}. 
+
+Retrieves the tile under the \doxylink{class_beetle}{Beetle}.
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the tile under the \doxylink{class_beetle}{Beetle}. 
+\end{DoxyReturn}
+\Hypertarget{class_beetle_a9402ccc5c161e136ea96db9dc5e96a7a}\label{class_beetle_a9402ccc5c161e136ea96db9dc5e96a7a} 
+\index{Beetle@{Beetle}!Move@{Move}}
+\index{Move@{Move}!Beetle@{Beetle}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Beetle\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+General\+Moves,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{original\+Cords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Define rules for moving the \doxylink{class_beetle}{Beetle} tile. 
+
+Implements the movement rules for \doxylink{class_beetle}{Beetle} tile. Aditional rules for \doxylink{class_beetle}{Beetle} are\+: Only 1 spaces per turn and can land on other occupied tiles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em possible\+General\+Moves} & The set of possible general moves. \\
+\hline
+{\em original\+Cords} & The original coordinates of the \doxylink{class_beetle}{Beetle} tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the possible moves after the rules were applied. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_bug_tile_a0e6ccf6da721b90ea10d742e53b8c924}{Base\+Bug\+Tile}}.
+
+\Hypertarget{class_beetle_ae91c2cc41262a70d4d7c95ac711b5331}\label{class_beetle_ae91c2cc41262a70d4d7c95ac711b5331} 
+\index{Beetle@{Beetle}!SetTileUnderBeetle@{SetTileUnderBeetle}}
+\index{SetTileUnderBeetle@{SetTileUnderBeetle}!Beetle@{Beetle}}
+\doxysubsubsection{\texorpdfstring{SetTileUnderBeetle()}{SetTileUnderBeetle()}}
+{\footnotesize\ttfamily void Beetle\+::\+Set\+Tile\+Under\+Beetle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}} $>$}]{tile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the tile under the \doxylink{class_beetle}{Beetle}. 
+
+Sets the tile under the \doxylink{class_beetle}{Beetle} to the specified tile.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & A shared pointer to the tile under the \doxylink{class_beetle}{Beetle}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/\mbox{\hyperlink{bug_tiles_8h}{bug\+Tiles.\+h}}\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/bug\+Tiles.\+cpp\end{DoxyCompactItemize}

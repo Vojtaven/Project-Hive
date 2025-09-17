@@ -1,0 +1,98 @@
+\doxysection{Renderer.\+h}
+\hypertarget{_renderer_8h_source}{}\label{_renderer_8h_source}\index{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/Renderer.h@{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/Renderer.h}}
+\mbox{\hyperlink{_renderer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ Renderer\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ Renderer\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bug_tiles_8h}{bugTiles.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_8h}{common.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hex_utilities_8h}{hexUtilities.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}raylib.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}raymath.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}rlgl.h"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_renderer}{Renderer}}\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}{Renderer}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_af5b95c82bf35864d48d4a6709ab21abe}{RenderBaseLayout}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ map,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_player}{Player}}\ players[2],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ idOfPlayerOnTurn);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\ \mbox{\hyperlink{class_renderer_a3bb044c6811d69150b8417511e87985d}{FindCordsOfHexUnderCursor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_renderer_ad33711f54e68c5fd5aa6e1edf5923bbe}{GetHexagonHorizontalCount}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_renderer_a0a7388e773442e5959092b022ec030f5}{IsMouseInPlayersFields}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_renderer_a6f058e65f4abd93bf1888b2ffaeb8c37}{GetIndexOfHexInPlayerField}}(\textcolor{keywordtype}{int}\ playerId);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a29504288a1bf1ddaffec069f1d7a88c5}{RenderPlayers}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_player}{Player}}\ players[2],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ idOfPlayerOnTurn);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_abde0f10662da0479ccd82790611a993b}{HighLightSelectedHex}}(std::variant<std::pair<int,\ int>,\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}>\ selectedHex);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a8eaf033eb96176eda40d2aa46fa96175}{HighLightPossibleMoves}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleMoves);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a8479b846a935a1e3298af69b64c6c3c6}{DisplayQueenMessage}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a1dd6d7ab610b2694029ce35bc5683f85}{DisplayCenteredTextBaner}}(\textcolor{keyword}{const}\ std::string\&\ message,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ font\_size\ =\ \mbox{\hyperlink{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51}{FONT\_SIZE}});}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ RenderHexOnPosition(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}}*\ hex,\ Vector2\ hexScreenPos);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ RenderCenteredText(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text,\ \textcolor{keyword}{const}\ Vector2\&\ startPosition,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ avaibleSpace,}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\ textColor\ =\ \mbox{\hyperlink{common_8h_a5282abd28d40f03aea6f99f4700d6b5d}{TEXT\_COLOR}},\ \textcolor{keywordtype}{int}\ fontSize\ =\ \mbox{\hyperlink{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51}{FONT\_SIZE}});}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ DisplayTextBanner(\textcolor{keyword}{const}\ std::string\&\ message,\ \textcolor{keyword}{const}\ Vector2\&\ position,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ font\_size\ =\ \mbox{\hyperlink{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51}{FONT\_SIZE}},}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Color\ textColor\ =\ \mbox{\hyperlink{common_8h_a5282abd28d40f03aea6f99f4700d6b5d}{TEXT\_COLOR}},\ \textcolor{keyword}{const}\ Color\ bannerColor\ =\ WHITE,}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Color\ borderColor\ =\ RED);}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ DisplayFrameTime();}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ RenderPlayerFields();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ RenderHexMap(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ map);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{float}\ RenderPlayersPiecePanel(\textcolor{keyword}{const}\ \mbox{\hyperlink{_player_8h_a938ee93ea08749d3e6c1f79248eeca59}{playerPiece}}\&\ piece,\ \textcolor{keyword}{const}\ Vector2\&\ startPosition,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ avaibleSpace,}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\ textColor\ =\ \mbox{\hyperlink{common_8h_a5282abd28d40f03aea6f99f4700d6b5d}{TEXT\_COLOR}},\ \textcolor{keywordtype}{int}\ fontSize\ =\ \mbox{\hyperlink{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51}{FONT\_SIZE}},\ Color\ outlineColor\ =\ WHITE,}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\ hexBaseColor\ =\ BLACK);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ WindowInitialization();}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{void}\ VariableInitialization();}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawCenteredBugHex(\textcolor{keyword}{const}\ Vector2\&\ startPosition,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ avaibleSpace,\ Color\ outlineColor\ =\ WHITE,}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\ hexBaseColor\ =\ BLACK,\ Color\ hexSecondaryColor\ =\ BLACK);}
+\DoxyCodeLine{00237\ \ \ \ \ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawDefaultHex(\textcolor{keyword}{const}\ Vector2\&\ hexScreenPos,\ Color\ outlineColor\ =\ WHITE,\ Color\ hexBaseColor\ =\ BLACK);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawBugHex(\textcolor{keyword}{const}\ Vector2\&\ hexScreenPos,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}}*\ tile);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawBugHex(\textcolor{keyword}{const}\ Vector2\&\ hexScreenPos,\ Color\ outlineColor\ =\ WHITE,\ Color\ hexBaseColor\ =\ BLACK,}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\ hexSecondaryColor\ =\ BLACK);}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00278\ \ \ \ \ Vector2\ CalculateScreenPos(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ hexPos);}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ }
+\DoxyCodeLine{00287\ \ \ \ \ std::pair<std::string,\ Color>\ GetColorAndNameFromBugType(\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ type);}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordtype}{float}\ lineThickness\ =\ 0;\ }
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordtype}{float}\ defaultOffset\ =\ 0,\ verticalOffset\ =\ 0,\ horizontalOffset\ =\ 0;\ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{int}\ hexagonHorizontalCount\ =\ 0;\ }
+\DoxyCodeLine{00292\ \ \ \ \ Vector2\ windowSize,\ windowPosition;\ }
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{float}\ hexSize\ =\ 0;\ }
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordtype}{int}\ displayIdentifier\ =\ INT\_MAX;\ }
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordtype}{float}\ sideSize\ =\ 0;\ }
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{float}\ offsetOfHexInPlayerField\ =\ 0;\ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{float}\ spacingOfHexInPlayerField\ =\ 0;\ }
+\DoxyCodeLine{00298\ \};}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

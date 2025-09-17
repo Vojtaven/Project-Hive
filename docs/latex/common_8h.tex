@@ -1,0 +1,217 @@
+\doxysection{D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/common.h File Reference}
+\hypertarget{common_8h}{}\label{common_8h}\index{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/common.h@{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/common.h}}
+
+
+Contains common constants and definitions used throughout the project.  
+
+
+{\ttfamily \#include "{}raylib.\+h"{}}\newline
+{\ttfamily \#include "{}raymath.\+h"{}}\newline
+{\ttfamily \#include "{}rlgl.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int \mbox{\hyperlink{common_8h_ad881b6d7d59b7627ede8617143bbcd86}{HEXAGON\+\_\+\+SIDES\+\_\+\+COUNT}} = 6
+\item 
+constexpr int \mbox{\hyperlink{common_8h_af688b1e2aef35ec09a9c00a4c4ff31d4}{SIZE\+\_\+\+OF\+\_\+\+AXIAL\+\_\+\+VECTORS}} = 6
+\item 
+constexpr bool \mbox{\hyperlink{common_8h_ac86693e4af2b3e616a9e67355c93d85b}{DEBUG\+\_\+\+MODE}} = false
+\item 
+constexpr int \mbox{\hyperlink{common_8h_a9da4192842fb58f664b789cd9534c26c}{FPS}} = 90
+\item 
+constexpr int \mbox{\hyperlink{common_8h_ab9c6bc57244a9545fb87812ba7631685}{HEXAGON\+\_\+\+VERTICAL\+\_\+\+COUNT}} = 12
+\item 
+constexpr float \mbox{\hyperlink{common_8h_af66ea29c46433a0c49cd5fe9e057cc68}{WINDOW\+\_\+\+SCALING}} = (float)(2 / 3.\+0)
+\item 
+const float \mbox{\hyperlink{common_8h_a7b8cd455f34c396c092f6a41911da345}{SQRT\+\_\+\+OF\+\_\+\+THREE}} = (float)sqrt(3)
+\item 
+constexpr float \mbox{\hyperlink{common_8h_a0b998ce5c7a8f748c553a5804a0a06ff}{SIDE\+\_\+\+SIZE\+\_\+\+PERCENT}} = (float)(1.\+4 / 10)
+\item 
+constexpr float \mbox{\hyperlink{common_8h_a3bbb9ec342daccf1bf7c5d9378f9666d}{TOLERANCE}} = 5
+\item 
+constexpr int \mbox{\hyperlink{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51}{FONT\+\_\+\+SIZE}} = 20
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_a4daf0eaf7e76778facd83bb34ada6296}{QUEEN\+\_\+\+BEE\+\_\+\+COLOR}} = ORANGE
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_a2eb27e3d7a1a28d417b80588b2efcfe5}{BEETLE\+\_\+\+COLOR}} = PURPLE
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_ae51cd874cda044ce8439a45418047107}{GRASS\+\_\+\+HOPPER\+\_\+\+COLOR}} = DARKGREEN
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_ad3121a7f2bb5733bc0b96fb661a070d7}{SPIDER\+\_\+\+COLOR}} = BROWN
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_a5079bbace95c28f06ca026b982089514}{SOLDIER\+\_\+\+ANT\+\_\+\+COLOR}} = BLUE
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_a5282abd28d40f03aea6f99f4700d6b5d}{TEXT\+\_\+\+COLOR}} = WHITE
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_a5c33374af77a658a897eb7bc6f24bd75}{PLAYER\+\_\+\+ON\+\_\+\+TURN\+\_\+\+COLOR}} = RED
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_a8a1081cceaa7abd6152d41f04964579b}{PLAYER\+\_\+\+BACKGROUND\+\_\+\+COLOR}} = \{ 40, 40, 40, 255 \}
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_add65d1bdf9857927f036fa71fdca53cb}{HIGHLIGHT\+\_\+\+COLOR}} = LIME
+\item 
+constexpr Color \mbox{\hyperlink{common_8h_ace6a294cd1fff87300965fb81bfe53fc}{POSSIBLE\+\_\+\+MOVES\+\_\+\+HIGHLIGHT\+\_\+\+COLOR}} = \{ 7, 140, 140, 255 \}
+\item 
+constexpr std\+::pair$<$ Color, Color $>$ \mbox{\hyperlink{common_8h_ac45e9f836c5abf63c66081108a27d27e}{FIRST\+\_\+\+PLAYER\+\_\+\+COLORS}} = \{ WHITE, BLACK \}
+\item 
+constexpr std\+::pair$<$ Color, Color $>$ \mbox{\hyperlink{common_8h_ad035ff3871d7ffd03863172d340faad6}{SECOND\+\_\+\+PLAYER\+\_\+\+COLORS}} = \{ WHITE, GRAY \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains common constants and definitions used throughout the project. 
+
+\begin{DoxyAuthor}{Author}
+Vojtech Venzara (\href{mailto:Vojtaven@seznam.cz}{\texttt{ Vojtaven@seznam.\+cz}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/04-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{common_8h_a2eb27e3d7a1a28d417b80588b2efcfe5}\label{common_8h_a2eb27e3d7a1a28d417b80588b2efcfe5} 
+\index{common.h@{common.h}!BEETLE\_COLOR@{BEETLE\_COLOR}}
+\index{BEETLE\_COLOR@{BEETLE\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{BEETLE\_COLOR}{BEETLE\_COLOR}}
+{\footnotesize\ttfamily constexpr Color BEETLE\+\_\+\+COLOR = PURPLE\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color of the \doxylink{class_beetle}{Beetle}. \Hypertarget{common_8h_ac86693e4af2b3e616a9e67355c93d85b}\label{common_8h_ac86693e4af2b3e616a9e67355c93d85b} 
+\index{common.h@{common.h}!DEBUG\_MODE@{DEBUG\_MODE}}
+\index{DEBUG\_MODE@{DEBUG\_MODE}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_MODE}{DEBUG\_MODE}}
+{\footnotesize\ttfamily constexpr bool DEBUG\+\_\+\+MODE = false\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Turns on unlimeted FPS and frame time \Hypertarget{common_8h_ac45e9f836c5abf63c66081108a27d27e}\label{common_8h_ac45e9f836c5abf63c66081108a27d27e} 
+\index{common.h@{common.h}!FIRST\_PLAYER\_COLORS@{FIRST\_PLAYER\_COLORS}}
+\index{FIRST\_PLAYER\_COLORS@{FIRST\_PLAYER\_COLORS}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{FIRST\_PLAYER\_COLORS}{FIRST\_PLAYER\_COLORS}}
+{\footnotesize\ttfamily constexpr std\+::pair$<$Color, Color$>$ FIRST\+\_\+\+PLAYER\+\_\+\+COLORS = \{ WHITE, BLACK \}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Colors for the first player. \Hypertarget{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51}\label{common_8h_a36f8b4b0227f9dac9b5018b20c9a1f51} 
+\index{common.h@{common.h}!FONT\_SIZE@{FONT\_SIZE}}
+\index{FONT\_SIZE@{FONT\_SIZE}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{FONT\_SIZE}{FONT\_SIZE}}
+{\footnotesize\ttfamily constexpr int FONT\+\_\+\+SIZE = 20\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Default font size. \Hypertarget{common_8h_a9da4192842fb58f664b789cd9534c26c}\label{common_8h_a9da4192842fb58f664b789cd9534c26c} 
+\index{common.h@{common.h}!FPS@{FPS}}
+\index{FPS@{FPS}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{FPS}{FPS}}
+{\footnotesize\ttfamily constexpr int FPS = 90\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Frames per second for the game. (Only if DEBUG\+\_\+\+MODE == false \Hypertarget{common_8h_ae51cd874cda044ce8439a45418047107}\label{common_8h_ae51cd874cda044ce8439a45418047107} 
+\index{common.h@{common.h}!GRASS\_HOPPER\_COLOR@{GRASS\_HOPPER\_COLOR}}
+\index{GRASS\_HOPPER\_COLOR@{GRASS\_HOPPER\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{GRASS\_HOPPER\_COLOR}{GRASS\_HOPPER\_COLOR}}
+{\footnotesize\ttfamily constexpr Color GRASS\+\_\+\+HOPPER\+\_\+\+COLOR = DARKGREEN\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color of the Grasshopper. \Hypertarget{common_8h_ad881b6d7d59b7627ede8617143bbcd86}\label{common_8h_ad881b6d7d59b7627ede8617143bbcd86} 
+\index{common.h@{common.h}!HEXAGON\_SIDES\_COUNT@{HEXAGON\_SIDES\_COUNT}}
+\index{HEXAGON\_SIDES\_COUNT@{HEXAGON\_SIDES\_COUNT}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{HEXAGON\_SIDES\_COUNT}{HEXAGON\_SIDES\_COUNT}}
+{\footnotesize\ttfamily constexpr int HEXAGON\+\_\+\+SIDES\+\_\+\+COUNT = 6\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Number of sides in a hexagon. \Hypertarget{common_8h_ab9c6bc57244a9545fb87812ba7631685}\label{common_8h_ab9c6bc57244a9545fb87812ba7631685} 
+\index{common.h@{common.h}!HEXAGON\_VERTICAL\_COUNT@{HEXAGON\_VERTICAL\_COUNT}}
+\index{HEXAGON\_VERTICAL\_COUNT@{HEXAGON\_VERTICAL\_COUNT}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{HEXAGON\_VERTICAL\_COUNT}{HEXAGON\_VERTICAL\_COUNT}}
+{\footnotesize\ttfamily constexpr int HEXAGON\+\_\+\+VERTICAL\+\_\+\+COUNT = 12\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Number of hexagons vertically in the game board. \Hypertarget{common_8h_add65d1bdf9857927f036fa71fdca53cb}\label{common_8h_add65d1bdf9857927f036fa71fdca53cb} 
+\index{common.h@{common.h}!HIGHLIGHT\_COLOR@{HIGHLIGHT\_COLOR}}
+\index{HIGHLIGHT\_COLOR@{HIGHLIGHT\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{HIGHLIGHT\_COLOR}{HIGHLIGHT\_COLOR}}
+{\footnotesize\ttfamily constexpr Color HIGHLIGHT\+\_\+\+COLOR = LIME\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color for highlighted elements. \Hypertarget{common_8h_a8a1081cceaa7abd6152d41f04964579b}\label{common_8h_a8a1081cceaa7abd6152d41f04964579b} 
+\index{common.h@{common.h}!PLAYER\_BACKGROUND\_COLOR@{PLAYER\_BACKGROUND\_COLOR}}
+\index{PLAYER\_BACKGROUND\_COLOR@{PLAYER\_BACKGROUND\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_BACKGROUND\_COLOR}{PLAYER\_BACKGROUND\_COLOR}}
+{\footnotesize\ttfamily constexpr Color PLAYER\+\_\+\+BACKGROUND\+\_\+\+COLOR = \{ 40, 40, 40, 255 \}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Background color for player info. \Hypertarget{common_8h_a5c33374af77a658a897eb7bc6f24bd75}\label{common_8h_a5c33374af77a658a897eb7bc6f24bd75} 
+\index{common.h@{common.h}!PLAYER\_ON\_TURN\_COLOR@{PLAYER\_ON\_TURN\_COLOR}}
+\index{PLAYER\_ON\_TURN\_COLOR@{PLAYER\_ON\_TURN\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_ON\_TURN\_COLOR}{PLAYER\_ON\_TURN\_COLOR}}
+{\footnotesize\ttfamily constexpr Color PLAYER\+\_\+\+ON\+\_\+\+TURN\+\_\+\+COLOR = RED\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color indicating the player on turn. \Hypertarget{common_8h_ace6a294cd1fff87300965fb81bfe53fc}\label{common_8h_ace6a294cd1fff87300965fb81bfe53fc} 
+\index{common.h@{common.h}!POSSIBLE\_MOVES\_HIGHLIGHT\_COLOR@{POSSIBLE\_MOVES\_HIGHLIGHT\_COLOR}}
+\index{POSSIBLE\_MOVES\_HIGHLIGHT\_COLOR@{POSSIBLE\_MOVES\_HIGHLIGHT\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{POSSIBLE\_MOVES\_HIGHLIGHT\_COLOR}{POSSIBLE\_MOVES\_HIGHLIGHT\_COLOR}}
+{\footnotesize\ttfamily constexpr Color POSSIBLE\+\_\+\+MOVES\+\_\+\+HIGHLIGHT\+\_\+\+COLOR = \{ 7, 140, 140, 255 \}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color for highlighting possible moves. It is Dark cyan \Hypertarget{common_8h_a4daf0eaf7e76778facd83bb34ada6296}\label{common_8h_a4daf0eaf7e76778facd83bb34ada6296} 
+\index{common.h@{common.h}!QUEEN\_BEE\_COLOR@{QUEEN\_BEE\_COLOR}}
+\index{QUEEN\_BEE\_COLOR@{QUEEN\_BEE\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{QUEEN\_BEE\_COLOR}{QUEEN\_BEE\_COLOR}}
+{\footnotesize\ttfamily constexpr Color QUEEN\+\_\+\+BEE\+\_\+\+COLOR = ORANGE\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color of the Queen Bee. \Hypertarget{common_8h_ad035ff3871d7ffd03863172d340faad6}\label{common_8h_ad035ff3871d7ffd03863172d340faad6} 
+\index{common.h@{common.h}!SECOND\_PLAYER\_COLORS@{SECOND\_PLAYER\_COLORS}}
+\index{SECOND\_PLAYER\_COLORS@{SECOND\_PLAYER\_COLORS}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{SECOND\_PLAYER\_COLORS}{SECOND\_PLAYER\_COLORS}}
+{\footnotesize\ttfamily constexpr std\+::pair$<$Color, Color$>$ SECOND\+\_\+\+PLAYER\+\_\+\+COLORS = \{ WHITE, GRAY \}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Colors for the second player. \Hypertarget{common_8h_a0b998ce5c7a8f748c553a5804a0a06ff}\label{common_8h_a0b998ce5c7a8f748c553a5804a0a06ff} 
+\index{common.h@{common.h}!SIDE\_SIZE\_PERCENT@{SIDE\_SIZE\_PERCENT}}
+\index{SIDE\_SIZE\_PERCENT@{SIDE\_SIZE\_PERCENT}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{SIDE\_SIZE\_PERCENT}{SIDE\_SIZE\_PERCENT}}
+{\footnotesize\ttfamily constexpr float SIDE\+\_\+\+SIZE\+\_\+\+PERCENT = (float)(1.\+4 / 10)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Side size percentage. \Hypertarget{common_8h_af688b1e2aef35ec09a9c00a4c4ff31d4}\label{common_8h_af688b1e2aef35ec09a9c00a4c4ff31d4} 
+\index{common.h@{common.h}!SIZE\_OF\_AXIAL\_VECTORS@{SIZE\_OF\_AXIAL\_VECTORS}}
+\index{SIZE\_OF\_AXIAL\_VECTORS@{SIZE\_OF\_AXIAL\_VECTORS}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_OF\_AXIAL\_VECTORS}{SIZE\_OF\_AXIAL\_VECTORS}}
+{\footnotesize\ttfamily constexpr int SIZE\+\_\+\+OF\+\_\+\+AXIAL\+\_\+\+VECTORS = 6\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Size of axial vectors array. \Hypertarget{common_8h_a5079bbace95c28f06ca026b982089514}\label{common_8h_a5079bbace95c28f06ca026b982089514} 
+\index{common.h@{common.h}!SOLDIER\_ANT\_COLOR@{SOLDIER\_ANT\_COLOR}}
+\index{SOLDIER\_ANT\_COLOR@{SOLDIER\_ANT\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{SOLDIER\_ANT\_COLOR}{SOLDIER\_ANT\_COLOR}}
+{\footnotesize\ttfamily constexpr Color SOLDIER\+\_\+\+ANT\+\_\+\+COLOR = BLUE\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color of the Soldier Ant. \Hypertarget{common_8h_ad3121a7f2bb5733bc0b96fb661a070d7}\label{common_8h_ad3121a7f2bb5733bc0b96fb661a070d7} 
+\index{common.h@{common.h}!SPIDER\_COLOR@{SPIDER\_COLOR}}
+\index{SPIDER\_COLOR@{SPIDER\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{SPIDER\_COLOR}{SPIDER\_COLOR}}
+{\footnotesize\ttfamily constexpr Color SPIDER\+\_\+\+COLOR = BROWN\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color of the \doxylink{class_spider}{Spider}. \Hypertarget{common_8h_a7b8cd455f34c396c092f6a41911da345}\label{common_8h_a7b8cd455f34c396c092f6a41911da345} 
+\index{common.h@{common.h}!SQRT\_OF\_THREE@{SQRT\_OF\_THREE}}
+\index{SQRT\_OF\_THREE@{SQRT\_OF\_THREE}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{SQRT\_OF\_THREE}{SQRT\_OF\_THREE}}
+{\footnotesize\ttfamily const float SQRT\+\_\+\+OF\+\_\+\+THREE = (float)sqrt(3)}
+
+Square root of three. For faster calculation \Hypertarget{common_8h_a5282abd28d40f03aea6f99f4700d6b5d}\label{common_8h_a5282abd28d40f03aea6f99f4700d6b5d} 
+\index{common.h@{common.h}!TEXT\_COLOR@{TEXT\_COLOR}}
+\index{TEXT\_COLOR@{TEXT\_COLOR}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{TEXT\_COLOR}{TEXT\_COLOR}}
+{\footnotesize\ttfamily constexpr Color TEXT\+\_\+\+COLOR = WHITE\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Color of text elements. \Hypertarget{common_8h_a3bbb9ec342daccf1bf7c5d9378f9666d}\label{common_8h_a3bbb9ec342daccf1bf7c5d9378f9666d} 
+\index{common.h@{common.h}!TOLERANCE@{TOLERANCE}}
+\index{TOLERANCE@{TOLERANCE}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{TOLERANCE}{TOLERANCE}}
+{\footnotesize\ttfamily constexpr float TOLERANCE = 5\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Tolerance value for calculations. \Hypertarget{common_8h_af66ea29c46433a0c49cd5fe9e057cc68}\label{common_8h_af66ea29c46433a0c49cd5fe9e057cc68} 
+\index{common.h@{common.h}!WINDOW\_SCALING@{WINDOW\_SCALING}}
+\index{WINDOW\_SCALING@{WINDOW\_SCALING}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SCALING}{WINDOW\_SCALING}}
+{\footnotesize\ttfamily constexpr float WINDOW\+\_\+\+SCALING = (float)(2 / 3.\+0)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Scaling factor for window size. 

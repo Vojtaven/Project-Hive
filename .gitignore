@@ -1,0 +1,23 @@
+﻿################################################################################
+# Never commit compilation (by-)products and machine-specific settings
+################################################################################
+
+*.vscode
+*.vs
+build
+out
+Debug
+Release
+x64
+*.user
+CMakeSettings.json
+*.sln
+*.vcxproj
+*.filters
+*.bak
+/labs/lab_10
+/labs/lab_08/tests/test1
+/labs/lab_08/tests
+/labs/lab_07
+/labs
+/finalhw/Battle-simulator

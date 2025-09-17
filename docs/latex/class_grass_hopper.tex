@@ -1,0 +1,132 @@
+\doxysection{Grass\+Hopper Class Reference}
+\hypertarget{class_grass_hopper}{}\label{class_grass_hopper}\index{GrassHopper@{GrassHopper}}
+Inheritance diagram for Grass\+Hopper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grass_hopper}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_grass_hopper_af1ae215b8e7d7ed71f3d7c535a6c180b}{Grass\+Hopper}} (const int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}}, const Color color=\mbox{\hyperlink{common_8h_ae51cd874cda044ce8439a45418047107}{GRASS\+\_\+\+HOPPER\+\_\+\+COLOR}}, const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}=\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246acd7c88584394c8cb200d5cd9f7925d92}{bug\+Type\+::\+GRASS\+\_\+\+HOPPER}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_grass_hopper}{Grass\+Hopper} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_grass_hopper_a5b8b2d795fa215f90107a0597547187f}{\texorpdfstring{$\sim$}{\string~}\+Grass\+Hopper}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor for Grass Hopper. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_grass_hopper_af7a27395c732e1c44cc000084507404e}{Move}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&original\+Cords)
+\begin{DoxyCompactList}\small\item\em Define rules for moving the Grass Hopper tile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_bug_tile_a961a2a9c008e9d9b74d2196af5a58f01}{Base\+Bug\+Tile}} (const int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}}, const Color color, const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_base_bug_tile}{Base\+Bug\+Tile} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_base_bug_tile_a85abaea5f923ef07feb230f514ce4995}{Base\+Bug\+Tile}} ()=delete
+\begin{DoxyCompactList}\small\item\em Deleted default constructor. \end{DoxyCompactList}\item 
+const Color \& \mbox{\hyperlink{class_base_bug_tile_a775d4e32edd60dadcc899949d5f12ffb}{Get\+Bug\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the Bug Color object. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_base_bug_tile_a6fa62549274b32765b93431151580cfd}{Get\+Player\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_player}{Player} ID object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \& \mbox{\hyperlink{class_base_bug_tile_a92313d77aa6ffacac607aa524a549287}{Get\+Bug\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the Bug Type object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a8ffc587c75a51b063d481a6494dad063}{Place}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const int \&IDOf\+Player, const bool \&is\+Zero\+Turn=false)
+\begin{DoxyCompactList}\small\item\em Define rules for placing the bug tile. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_base_bug_tile_a90db1952d30b43b544eee34bf6dd5a89}{\texorpdfstring{$\sim$}{\string~}\+Base\+Bug\+Tile}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_base_bug_tile}{Base\+Bug\+Tile}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_ad25344e2000feb209197c6b3a84bdd14}{Spaces\+Surronded\+By\+Their\+Color}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const int \&IDOf\+Player)
+\begin{DoxyCompactList}\small\item\em Retrieves tiles with atleast one neighbor of same color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_a1b4c4299dd4299b026ece1863dca2d08}{Check\+Integrity\+Of\+Hive\+Without\+One\+Tile}} (\mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Removed\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks the integrity of the hive without one tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_ac58be7526d2048fb6fd6581b3b8dd33e}{Freedom\+To\+Move}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Removed\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks if the bug tile has freedom to move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_aa7fe73915fa896143949de902743f6ba}{Is\+Space\+Surrounded}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks if a tile is surrounded by tiles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a67694e6db79871dc8ad5e63330fcda35}{Remove\+Possible\+Moves\+Around\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Removes possible moves around a tile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \& \mbox{\hyperlink{class_base_bug_tile_a1cc91958c9996e3dec7a30f72341debf}{Remove\+Possible\+Moves\+Around\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Removes possible moves around a tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_a232e1bc33321f410dbc42714ab6b12fa}{Is\+Map\+Clear}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map) const
+\begin{DoxyCompactList}\small\item\em Checks if the game map is clear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}
+\item 
+Color \mbox{\hyperlink{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1}{bug\+Color}} = PINK
+\item 
+int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}} = INT\+\_\+\+MAX
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_grass_hopper_af1ae215b8e7d7ed71f3d7c535a6c180b}\label{class_grass_hopper_af1ae215b8e7d7ed71f3d7c535a6c180b} 
+\index{GrassHopper@{GrassHopper}!GrassHopper@{GrassHopper}}
+\index{GrassHopper@{GrassHopper}!GrassHopper@{GrassHopper}}
+\doxysubsubsection{\texorpdfstring{GrassHopper()}{GrassHopper()}}
+{\footnotesize\ttfamily Grass\+Hopper\+::\+Grass\+Hopper (\begin{DoxyParamCaption}\item[{const int}]{player\+Id,  }\item[{const Color}]{color = {\ttfamily \mbox{\hyperlink{common_8h_ae51cd874cda044ce8439a45418047107}{GRASS\+\_\+\+HOPPER\+\_\+\+COLOR}}},  }\item[{const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}}}]{type = {\ttfamily \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246acd7c88584394c8cb200d5cd9f7925d92}{bug\+Type\+::\+GRASS\+\_\+\+HOPPER}}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_grass_hopper}{Grass\+Hopper} object. 
+
+Constructs a \doxylink{class_grass_hopper}{Grass\+Hopper} object with the specified player ID, color, and type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Id} & The ID of the player owning the Grass Hopper tile. \\
+\hline
+{\em color} & The color of the Grass Hopper tile (optional, defaults to GRASS\+\_\+\+HOPPER\+\_\+\+COLOR). \\
+\hline
+{\em type} & The type of bug represented by the tile (optional, defaults to \doxylink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246acd7c88584394c8cb200d5cd9f7925d92}{bug\+Type\+::\+GRASS\+\_\+\+HOPPER}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_grass_hopper_a5b8b2d795fa215f90107a0597547187f}\label{class_grass_hopper_a5b8b2d795fa215f90107a0597547187f} 
+\index{GrassHopper@{GrassHopper}!````~GrassHopper@{\texorpdfstring{$\sim$}{\string~}GrassHopper}}
+\index{````~GrassHopper@{\texorpdfstring{$\sim$}{\string~}GrassHopper}!GrassHopper@{GrassHopper}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GrassHopper()}{\string~GrassHopper()}}
+{\footnotesize\ttfamily Grass\+Hopper\+::\texorpdfstring{$\sim$}{\string~}\+Grass\+Hopper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor for Grass Hopper. 
+
+Defines a default destructor for \doxylink{class_grass_hopper}{Grass\+Hopper} objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_grass_hopper_af7a27395c732e1c44cc000084507404e}\label{class_grass_hopper_af7a27395c732e1c44cc000084507404e} 
+\index{GrassHopper@{GrassHopper}!Move@{Move}}
+\index{Move@{Move}!GrassHopper@{GrassHopper}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Grass\+Hopper\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+General\+Moves,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{original\+Cords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Define rules for moving the Grass Hopper tile. 
+
+Implements the movement rules for Grass Hopper tile. Aditional rules for Grass Hopper are\+: Any number of spaces per turn, but must jump in straight line over occupied tiles
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em possible\+General\+Moves} & The set of possible general moves. \\
+\hline
+{\em original\+Cords} & The original coordinates of the Grass Hopper tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the possible moves after the rules were applied. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_bug_tile_a0e6ccf6da721b90ea10d742e53b8c924}{Base\+Bug\+Tile}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/\mbox{\hyperlink{bug_tiles_8h}{bug\+Tiles.\+h}}\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/bug\+Tiles.\+cpp\end{DoxyCompactItemize}

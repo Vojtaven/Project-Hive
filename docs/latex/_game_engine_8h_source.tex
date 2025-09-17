@@ -1,0 +1,96 @@
+\doxysection{Game\+Engine.\+h}
+\hypertarget{_game_engine_8h_source}{}\label{_game_engine_8h_source}\index{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/GameEngine.h@{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/GameEngine.h}}
+\mbox{\hyperlink{_game_engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ GAMEENGINE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ GAMEENGINE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bug_tiles_8h}{bugTiles.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_8h}{common.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hex_utilities_8h}{hexUtilities.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}raylib.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}raymath.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_renderer_8h}{Renderer.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}rlgl.h"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1}{GameStatus}}\ \{\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a1e23852820b9154316c7c06e2b7ba051}{NORMAL}},\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a2b4807f24940ca2fe73284bc6e864d66}{DRAW}},\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a0c195e8068b6ca55bc8779549ce6658c}{FIRST\_PLAYER\_WON}},\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1a95beb4e47ae6f912cd21a7fec20de943}{SECOND\_PLAYER\_WON}}\ }
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_engine}{GameEngine}}\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_game_engine_a64c430f74d72e2745646fdbffbd97930}{GameEngine}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a3c871a8feca0724e76e8ee0bba82d75a}{CheckInputs}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a294e2b169c9664f6a7316b24396c3992}{RenderBaseLayout}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a15ebca26ac9cd51d0862094f0ea4d39f}{PlayerNameConfiguration}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a5bfe8ffc5eadf66e2c97a7a81e325c51}{RenderRest}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{_game_engine_8h_a881b49e3802366255ad852f1c8624fd1}{GameStatus}}\ CheckGameStatus();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckIfPlayerWon(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ IDOfPlayer);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdatePossibleMovesOnSelectedTile();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ CheckInputInPlayerField();}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ CheckInputInHexMap();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ InvalidateSelectedTileVariables();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveHex(hexTileMap::iterator\&\ mapIterator);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ ChangeTurn();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifieBorderOfHive(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ presentPositionOfModifiedTile,}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalPositionOfModifiedTile);}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifieBorderOfHive(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ presentPositionOfModifiedTile);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ EraseUnnecessarydHexesFromBorder(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalPositionOfModifiedTile);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{bool}\ HasSomeBugHexNeighbor(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ hexcords);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\ GenerateBaseMap();}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00205\ \ \ \ \ hexTileMap::iterator\ FindIteratorOfHexUnderCursor();}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{class_renderer}{Renderer}}\ renderer\ =\ \mbox{\hyperlink{class_renderer}{Renderer}}();\ }
+\DoxyCodeLine{00208\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\ gameMap;\ }
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ borderOfHive;\ }
+\DoxyCodeLine{00211\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ possibleMovesOfSelectedTile;\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{int}\ hexagonHorizontalCount\ =\ 0;\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//Selected\ tile\ variables}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPlayerTileSelected\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{int}\ indexOfPlayerTileSelected\ =\ 0;\ }
+\DoxyCodeLine{00219\ \ \ \ \ std::shared\_ptr<BaseBugTile>\ pointerToSelectedTile\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00220\ \ \ \ \ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\ originalCordsOfSelectedTile\ =\ \{\ INT\_MAX,\ INT\_MAX\ \};\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{comment}{//\ If\ (turn\ =\ 3\ ||\ turn\ =\ 4\ )\ <=>\ I\ am\ stupid\ and\ left\ it\ set\ after\ debugging\ :]}}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{int}\ turn\ =\ 0;\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{int}\ idOfPlayerOnTurn\ =\ 0;\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{int}\ startingPlayer\ =\ 0;\ }
+\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}\ players[2];\ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{bool}\ gameInterupted\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00228\ \ \ \ \ std::string\ messageToDisplay\ =\ \textcolor{stringliteral}{"{}"{}};\ }
+\DoxyCodeLine{00229\ \};}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

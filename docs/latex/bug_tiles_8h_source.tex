@@ -1,0 +1,139 @@
+\doxysection{bug\+Tiles.\+h}
+\hypertarget{bug_tiles_8h_source}{}\label{bug_tiles_8h_source}\index{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/bugTiles.h@{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/bugTiles.h}}
+\mbox{\hyperlink{bug_tiles_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ BUG\_TILES\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ BUG\_TILES\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_8h}{common.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hex_utilities_8h}{hexUtilities.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}raylib.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}raymath.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}rlgl.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a42a0df0017ac2fee991da57be8adfb3a}{QUEEN\_BEE}},\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a5947a2c004c7aee6dbfd803326a0fa5b}{BEETLE}},\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a92a205a4d5fa78385fe7548e536ccf93}{SOLDIER\_ANT}},\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a9e7abc16c6a1b9bcd2d330c63933d981}{SPIDER}},\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246acd7c88584394c8cb200d5cd9f7925d92}{GRASS\_HOPPER}}\ }
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}}\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_base_bug_tile_a961a2a9c008e9d9b74d2196af5a58f01}{BaseBugTile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}},\ \textcolor{keyword}{const}\ Color\ color,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}})}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1}{bugColor}}(color),\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}(\mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}),\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}}(\mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}})\ \{\}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_base_bug_tile_a85abaea5f923ef07feb230f514ce4995}{BaseBugTile}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{const}\ Color\&\ \mbox{\hyperlink{class_base_bug_tile_a775d4e32edd60dadcc899949d5f12ffb}{GetBugColor}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1}{bugColor}};\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{class_base_bug_tile_a6fa62549274b32765b93431151580cfd}{GetPlayerID}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}};\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\&\ \mbox{\hyperlink{class_base_bug_tile_a92313d77aa6ffacac607aa524a549287}{GetBugType}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}};\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_base_bug_tile_a0e6ccf6da721b90ea10d742e53b8c924}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalCords)\ =\ 0;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_base_bug_tile_a8ffc587c75a51b063d481a6494dad063}{Place}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ IDOfPlayer,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\&\ isZeroTurn\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_base_bug_tile_a90db1952d30b43b544eee34bf6dd5a89}{\string~BaseBugTile}}()\{\};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_base_bug_tile_ad25344e2000feb209197c6b3a84bdd14}{SpacesSurrondedByTheirColor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ IDOfPlayer);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_bug_tile_a1b4c4299dd4299b026ece1863dca2d08}{CheckIntegrityOfHiveWithoutOneTile}}(\mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\ map,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ cordsOfRemovedHex);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_bug_tile_ac58be7526d2048fb6fd6581b3b8dd33e}{FreedomToMove}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ cordsOfRemovedHex);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_bug_tile_aa7fe73915fa896143949de902743f6ba}{IsSpaceSurrounded}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ cordsOfHex);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_base_bug_tile_a67694e6db79871dc8ad5e63330fcda35}{RemovePossibleMovesAroundTile}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleMoves,}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ tile);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ \mbox{\hyperlink{class_base_bug_tile_a67694e6db79871dc8ad5e63330fcda35}{RemovePossibleMovesAroundTile}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleMoves,}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ tile);}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_bug_tile_a232e1bc33321f410dbc42714ab6b12fa}{IsMapClear}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}};\ }
+\DoxyCodeLine{00208\ \ \ \ \ Color\ \mbox{\hyperlink{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1}{bugColor}}\ =\ PINK;\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}}\ =\ INT\_MAX;\ }
+\DoxyCodeLine{00210\ \};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00218\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_queen_bee}{QueenBee}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}}\ \{}
+\DoxyCodeLine{00219\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00230\ \ \ \ \ \mbox{\hyperlink{class_queen_bee_a2efa1115baf406b33b46029a41963c1a}{QueenBee}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}},\ \textcolor{keyword}{const}\ Color\ color\ =\ \mbox{\hyperlink{common_8h_a4daf0eaf7e76778facd83bb34ada6296}{QUEEN\_BEE\_COLOR}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}\ =\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a42a0df0017ac2fee991da57be8adfb3a}{bugType::QUEEN\_BEE}});}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00237\ \ \ \ \ \mbox{\hyperlink{class_queen_bee_a0cd2273c3477714dba9070a4982787e5}{\string~QueenBee}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00251\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_queen_bee_aa4343bec66890a0d2004bcb63d5d05cc}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalCords);}
+\DoxyCodeLine{00253\ \};}
+\DoxyCodeLine{00254\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_spider}{Spider}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}}\ \{}
+\DoxyCodeLine{00255\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00265\ \ \ \ \ \mbox{\hyperlink{class_spider_abd2f665076b29d4563bd761d635315cb}{Spider}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}},\ \textcolor{keyword}{const}\ Color\ color\ =\ \mbox{\hyperlink{common_8h_ad3121a7f2bb5733bc0b96fb661a070d7}{SPIDER\_COLOR}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}\ =\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a9e7abc16c6a1b9bcd2d330c63933d981}{bugType::SPIDER}});}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00272\ \ \ \ \ \mbox{\hyperlink{class_spider_a2e38560505cc867ae4cb0f799b584e92}{\string~Spider}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ }
+\DoxyCodeLine{00286\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_spider_a394bfbabefba38c74d372fade2731b8c}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalCords);}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00300\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ FindPositionThreeSpacesFromOrigin(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalCords);}
+\DoxyCodeLine{00303\ \};}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_beetle}{Beetle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}}\ \{}
+\DoxyCodeLine{00306\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00316\ \ \ \ \ \mbox{\hyperlink{class_beetle_ada49e48944c2a8d7202d9cfc513b899e}{Beetle}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}},\ \textcolor{keyword}{const}\ Color\ color\ =\ \mbox{\hyperlink{common_8h_a2eb27e3d7a1a28d417b80588b2efcfe5}{BEETLE\_COLOR}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}\ =\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a5947a2c004c7aee6dbfd803326a0fa5b}{bugType::BEETLE}});}
+\DoxyCodeLine{00317\ \ \ \ \ }
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{class_beetle_ab63c1492746ba402a5325384e2099f9f}{\string~Beetle}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00336\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_beetle_a9402ccc5c161e136ea96db9dc5e96a7a}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalCords);}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_beetle_ae91c2cc41262a70d4d7c95ac711b5331}{SetTileUnderBeetle}}(std::shared\_ptr<BaseBugTile>\ tile)\ \{\ bugTileUnderBeetle\ =\ tile;\ \}}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ }
+\DoxyCodeLine{00356\ \ \ \ \ std::shared\_ptr<BaseBugTile>\ \mbox{\hyperlink{class_beetle_a432c662c12d9898c892b7642d29998d7}{GetTileUnderBeetle}}()\ \{\ \textcolor{keywordflow}{return}\ bugTileUnderBeetle;\ \}}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00359\ \ \ \ \ std::shared\_ptr<BaseBugTile>\ bugTileUnderBeetle\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00360\ \};}
+\DoxyCodeLine{00361\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_grass_hopper}{GrassHopper}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}}\ \{}
+\DoxyCodeLine{00362\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00372\ \ \ \ \ \mbox{\hyperlink{class_grass_hopper_af1ae215b8e7d7ed71f3d7c535a6c180b}{GrassHopper}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}},\ \textcolor{keyword}{const}\ Color\ color\ =\ \mbox{\hyperlink{common_8h_ae51cd874cda044ce8439a45418047107}{GRASS\_HOPPER\_COLOR}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}\ =\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246acd7c88584394c8cb200d5cd9f7925d92}{bugType::GRASS\_HOPPER}});}
+\DoxyCodeLine{00373\ \ \ \ \ }
+\DoxyCodeLine{00379\ \ \ \ \ \mbox{\hyperlink{class_grass_hopper_a5b8b2d795fa215f90107a0597547187f}{\string~GrassHopper}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00392\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_grass_hopper_af7a27395c732e1c44cc000084507404e}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalCords);}
+\DoxyCodeLine{00394\ \};}
+\DoxyCodeLine{00395\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_soldier_ant}{SoldierAnt}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}}\ \{}
+\DoxyCodeLine{00396\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00406\ \ \ \ \ \mbox{\hyperlink{class_soldier_ant_a08b2f2858037c3b5d9b405b00f54d994}{SoldierAnt}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{playerId}},\ \textcolor{keyword}{const}\ Color\ color\ =\ \mbox{\hyperlink{common_8h_a5079bbace95c28f06ca026b982089514}{SOLDIER\_ANT\_COLOR}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bugType}}\ \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}\ =\ \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a92a205a4d5fa78385fe7548e536ccf93}{bugType::SOLDIER\_ANT}});}
+\DoxyCodeLine{00407\ \ \ \ \ }
+\DoxyCodeLine{00413\ \ \ \ \ \mbox{\hyperlink{class_soldier_ant_aa10b4e4874ed7fbc775d91a37e14e440}{\string~SoldierAnt}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00426\ \ \ \ \ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{class_soldier_ant_a1030cd984faa15397accaa0e20a2737d}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\&\ possibleGeneralMoves,}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ originalCords);}
+\DoxyCodeLine{00428\ \};}
+\DoxyCodeLine{00429\ }
+\DoxyCodeLine{00430\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !BUG\_TILES\_H}}
+
+\end{DoxyCode}

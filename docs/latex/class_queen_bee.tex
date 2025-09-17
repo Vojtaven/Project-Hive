@@ -1,0 +1,146 @@
+\doxysection{Queen\+Bee Class Reference}
+\hypertarget{class_queen_bee}{}\label{class_queen_bee}\index{QueenBee@{QueenBee}}
+
+
+Represents a Queen Bee bug tile in the game.  
+
+
+
+
+{\ttfamily \#include $<$bug\+Tiles.\+h$>$}
+
+Inheritance diagram for Queen\+Bee\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_queen_bee}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_queen_bee_a2efa1115baf406b33b46029a41963c1a}{Queen\+Bee}} (const int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}}, const Color color=\mbox{\hyperlink{common_8h_a4daf0eaf7e76778facd83bb34ada6296}{QUEEN\+\_\+\+BEE\+\_\+\+COLOR}}, const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}=\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a42a0df0017ac2fee991da57be8adfb3a}{bug\+Type\+::\+QUEEN\+\_\+\+BEE}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_queen_bee}{Queen\+Bee} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queen_bee_a0cd2273c3477714dba9070a4982787e5}{\texorpdfstring{$\sim$}{\string~}\+Queen\+Bee}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor for \doxylink{class_queen_bee}{Queen\+Bee}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_queen_bee_aa4343bec66890a0d2004bcb63d5d05cc}{Move}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&original\+Cords)
+\begin{DoxyCompactList}\small\item\em Define rules for moving the Queen Bee tile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_bug_tile_a961a2a9c008e9d9b74d2196af5a58f01}{Base\+Bug\+Tile}} (const int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}}, const Color color, const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_base_bug_tile}{Base\+Bug\+Tile} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_base_bug_tile_a85abaea5f923ef07feb230f514ce4995}{Base\+Bug\+Tile}} ()=delete
+\begin{DoxyCompactList}\small\item\em Deleted default constructor. \end{DoxyCompactList}\item 
+const Color \& \mbox{\hyperlink{class_base_bug_tile_a775d4e32edd60dadcc899949d5f12ffb}{Get\+Bug\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the Bug Color object. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_base_bug_tile_a6fa62549274b32765b93431151580cfd}{Get\+Player\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_player}{Player} ID object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \& \mbox{\hyperlink{class_base_bug_tile_a92313d77aa6ffacac607aa524a549287}{Get\+Bug\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the Bug Type object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a8ffc587c75a51b063d481a6494dad063}{Place}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const int \&IDOf\+Player, const bool \&is\+Zero\+Turn=false)
+\begin{DoxyCompactList}\small\item\em Define rules for placing the bug tile. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_base_bug_tile_a90db1952d30b43b544eee34bf6dd5a89}{\texorpdfstring{$\sim$}{\string~}\+Base\+Bug\+Tile}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_base_bug_tile}{Base\+Bug\+Tile}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_ad25344e2000feb209197c6b3a84bdd14}{Spaces\+Surronded\+By\+Their\+Color}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const int \&IDOf\+Player)
+\begin{DoxyCompactList}\small\item\em Retrieves tiles with atleast one neighbor of same color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_a1b4c4299dd4299b026ece1863dca2d08}{Check\+Integrity\+Of\+Hive\+Without\+One\+Tile}} (\mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Removed\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks the integrity of the hive without one tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_ac58be7526d2048fb6fd6581b3b8dd33e}{Freedom\+To\+Move}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Removed\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks if the bug tile has freedom to move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_aa7fe73915fa896143949de902743f6ba}{Is\+Space\+Surrounded}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks if a tile is surrounded by tiles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a67694e6db79871dc8ad5e63330fcda35}{Remove\+Possible\+Moves\+Around\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Removes possible moves around a tile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \& \mbox{\hyperlink{class_base_bug_tile_a1cc91958c9996e3dec7a30f72341debf}{Remove\+Possible\+Moves\+Around\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Removes possible moves around a tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_a232e1bc33321f410dbc42714ab6b12fa}{Is\+Map\+Clear}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map) const
+\begin{DoxyCompactList}\small\item\em Checks if the game map is clear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}
+\item 
+Color \mbox{\hyperlink{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1}{bug\+Color}} = PINK
+\item 
+int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}} = INT\+\_\+\+MAX
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a Queen Bee bug tile in the game. 
+
+This class inherits from \doxylink{class_base_bug_tile}{Base\+Bug\+Tile} and represents a Queen Bee bug tile in the game. It provides specific behavior for Queen Bee tiles. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_queen_bee_a2efa1115baf406b33b46029a41963c1a}\label{class_queen_bee_a2efa1115baf406b33b46029a41963c1a} 
+\index{QueenBee@{QueenBee}!QueenBee@{QueenBee}}
+\index{QueenBee@{QueenBee}!QueenBee@{QueenBee}}
+\doxysubsubsection{\texorpdfstring{QueenBee()}{QueenBee()}}
+{\footnotesize\ttfamily Queen\+Bee\+::\+Queen\+Bee (\begin{DoxyParamCaption}\item[{const int}]{player\+Id,  }\item[{const Color}]{color = {\ttfamily \mbox{\hyperlink{common_8h_a4daf0eaf7e76778facd83bb34ada6296}{QUEEN\+\_\+\+BEE\+\_\+\+COLOR}}},  }\item[{const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}}}]{type = {\ttfamily \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a42a0df0017ac2fee991da57be8adfb3a}{bug\+Type\+::\+QUEEN\+\_\+\+BEE}}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_queen_bee}{Queen\+Bee} object. 
+
+Constructs a \doxylink{class_queen_bee}{Queen\+Bee} object with the specified player ID, color, and type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Id} & The ID of the player owning the Queen Bee tile. \\
+\hline
+{\em color} & The color of the Queen Bee tile (optional, defaults to QUEEN\+\_\+\+BEE\+\_\+\+COLOR). \\
+\hline
+{\em type} & The type of bug represented by the tile (optional, defaults to \doxylink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a42a0df0017ac2fee991da57be8adfb3a}{bug\+Type\+::\+QUEEN\+\_\+\+BEE}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_queen_bee_a0cd2273c3477714dba9070a4982787e5}\label{class_queen_bee_a0cd2273c3477714dba9070a4982787e5} 
+\index{QueenBee@{QueenBee}!````~QueenBee@{\texorpdfstring{$\sim$}{\string~}QueenBee}}
+\index{````~QueenBee@{\texorpdfstring{$\sim$}{\string~}QueenBee}!QueenBee@{QueenBee}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}QueenBee()}{\string~QueenBee()}}
+{\footnotesize\ttfamily Queen\+Bee\+::\texorpdfstring{$\sim$}{\string~}\+Queen\+Bee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor for \doxylink{class_queen_bee}{Queen\+Bee}. 
+
+Defines a default destructor for \doxylink{class_queen_bee}{Queen\+Bee} objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_queen_bee_aa4343bec66890a0d2004bcb63d5d05cc}\label{class_queen_bee_aa4343bec66890a0d2004bcb63d5d05cc} 
+\index{QueenBee@{QueenBee}!Move@{Move}}
+\index{Move@{Move}!QueenBee@{QueenBee}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Queen\+Bee\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+General\+Moves,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{original\+Cords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Define rules for moving the Queen Bee tile. 
+
+Implements the movement rules for Queen Bee tile. Aditional rules for Queen bee are\+: Freedom to move, only 1 space per turn,
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em possible\+General\+Moves} & The set of possible general moves. \\
+\hline
+{\em original\+Cords} & The original coordinates of the Queen Bee tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the possible moves after the rules were applied. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_bug_tile_a0e6ccf6da721b90ea10d742e53b8c924}{Base\+Bug\+Tile}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/\mbox{\hyperlink{bug_tiles_8h}{bug\+Tiles.\+h}}\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/bug\+Tiles.\+cpp\end{DoxyCompactItemize}

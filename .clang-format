@@ -1,0 +1,14 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+UseTab: ForIndentation
+IndentWidth: 4
+TabWidth: 4
+AccessModifierOffset: -4
+ColumnLimit: 120
+IndentPPDirectives: AfterHash
+IncludeBlocks: Preserve
+Cpp11BracedListStyle: false
+#AlwaysBreakAfterDefinitionReturnType: None
+#PointerAlignment: Left
+#BreakBeforeBraces: Attach

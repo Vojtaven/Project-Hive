@@ -1,0 +1,233 @@
+\doxysection{D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/hex\+Utilities.h File Reference}
+\hypertarget{hex_utilities_8h}{}\label{hex_utilities_8h}\index{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/hexUtilities.h@{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/hexUtilities.h}}
+
+
+Conteins useful function to wotk with hex.  
+
+
+{\ttfamily \#include "{}common.\+h"{}}\newline
+{\ttfamily \#include "{}raylib.\+h"{}}\newline
+{\ttfamily \#include "{}raymath.\+h"{}}\newline
+{\ttfamily \#include "{}rlgl.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}}
+\begin{DoxyCompactList}\small\item\em Represents coordinates in a hexagonal grid. For cordinates we use the axial representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}\label{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e} 
+using {\bfseries hex\+Tile\+Map} = std\+::map$<$\mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}}, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}$>$$>$
+\begin{DoxyCompactList}\small\item\em A map of \doxylink{struct_hex_cords}{Hex\+Cords} to shared pointers to \doxylink{class_base_bug_tile}{Base\+Bug\+Tile}. \end{DoxyCompactList}\item 
+\Hypertarget{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}\label{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a} 
+using {\bfseries possible\+Moves\+Set} = std\+::set$<$\mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}}$>$
+\begin{DoxyCompactList}\small\item\em A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing possible moves. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{hex_utilities_8h_ae0a5e780120e2d5150b7385d51ed66f3}{Get\+Neighbors\+Of\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Get the neighbors of a tile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{hex_utilities_8h_ae1b0f96a2087bb90a3622b8a94d11131}{Get\+Empty\+Neighbors\+Of\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Get the emty neighbors of a tile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{hex_utilities_8h_aaca1434cf37c454e9dca6513f75b9e1b}{Get\+Occupied\+Neighbors\+Of\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Get the occupied neighbors of a tile. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{hex_utilities_8h_a95ddbbe9e577688b8d6e0513a1632479}{Cube\+\_\+round}} (Vector3 frac)
+\begin{DoxyCompactList}\small\item\em Rounds the fractional cube coordinates to the nearest cube coordinates. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{hex_utilities_8h_a8d759d4a48d4d4c8204357a36b75b03d}{Cube\+To\+Axial}} (Vector3 cube)
+\begin{DoxyCompactList}\small\item\em Converts cube coordinates to axial coordinates. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{hex_utilities_8h_aff2c3e28b7113a6b1797cb9e19906560}{Axial\+To\+Cube}} (Vector2 axial)
+\begin{DoxyCompactList}\small\item\em Converts axial coordinates to cube coordinates. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{hex_utilities_8h_a8e18609022ebed9ec69c330476d8843f}{Round\+Axial}} (Vector2 axial\+Frac)
+\begin{DoxyCompactList}\small\item\em Rounds the fractional axial coordinates to the nearest axial coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \mbox{\hyperlink{hex_utilities_8h_a7ae02bc7d4b958330079b16a2971a350}{AXIAL\+\_\+\+DIRECTION\+\_\+\+VECTORS}} \mbox{[}\mbox{\hyperlink{common_8h_af688b1e2aef35ec09a9c00a4c4ff31d4}{SIZE\+\_\+\+OF\+\_\+\+AXIAL\+\_\+\+VECTORS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of axial direction vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Conteins useful function to wotk with hex. 
+
+\begin{DoxyAuthor}{Author}
+Vojtech Venzara (\href{mailto:Vojtaven@seznam.cz}{\texttt{ Vojtaven@seznam.\+cz}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/04-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{hex_utilities_8h_aff2c3e28b7113a6b1797cb9e19906560}\label{hex_utilities_8h_aff2c3e28b7113a6b1797cb9e19906560} 
+\index{hexUtilities.h@{hexUtilities.h}!AxialToCube@{AxialToCube}}
+\index{AxialToCube@{AxialToCube}!hexUtilities.h@{hexUtilities.h}}
+\doxysubsubsection{\texorpdfstring{AxialToCube()}{AxialToCube()}}
+{\footnotesize\ttfamily Vector3 Axial\+To\+Cube (\begin{DoxyParamCaption}\item[{Vector2}]{axial }\end{DoxyParamCaption})}
+
+
+
+Converts axial coordinates to cube coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axial} & The axial coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding cube coordinates. 
+\end{DoxyReturn}
+\Hypertarget{hex_utilities_8h_a95ddbbe9e577688b8d6e0513a1632479}\label{hex_utilities_8h_a95ddbbe9e577688b8d6e0513a1632479} 
+\index{hexUtilities.h@{hexUtilities.h}!Cube\_round@{Cube\_round}}
+\index{Cube\_round@{Cube\_round}!hexUtilities.h@{hexUtilities.h}}
+\doxysubsubsection{\texorpdfstring{Cube\_round()}{Cube\_round()}}
+{\footnotesize\ttfamily Vector3 Cube\+\_\+round (\begin{DoxyParamCaption}\item[{Vector3}]{frac }\end{DoxyParamCaption})}
+
+
+
+Rounds the fractional cube coordinates to the nearest cube coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frac} & The fractional cube coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rounded cube coordinates. 
+\end{DoxyReturn}
+\Hypertarget{hex_utilities_8h_a8d759d4a48d4d4c8204357a36b75b03d}\label{hex_utilities_8h_a8d759d4a48d4d4c8204357a36b75b03d} 
+\index{hexUtilities.h@{hexUtilities.h}!CubeToAxial@{CubeToAxial}}
+\index{CubeToAxial@{CubeToAxial}!hexUtilities.h@{hexUtilities.h}}
+\doxysubsubsection{\texorpdfstring{CubeToAxial()}{CubeToAxial()}}
+{\footnotesize\ttfamily Vector2 Cube\+To\+Axial (\begin{DoxyParamCaption}\item[{Vector3}]{cube }\end{DoxyParamCaption})}
+
+
+
+Converts cube coordinates to axial coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cube} & The cube coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding axial coordinates. 
+\end{DoxyReturn}
+\Hypertarget{hex_utilities_8h_ae1b0f96a2087bb90a3622b8a94d11131}\label{hex_utilities_8h_ae1b0f96a2087bb90a3622b8a94d11131} 
+\index{hexUtilities.h@{hexUtilities.h}!GetEmptyNeighborsOfTile@{GetEmptyNeighborsOfTile}}
+\index{GetEmptyNeighborsOfTile@{GetEmptyNeighborsOfTile}!hexUtilities.h@{hexUtilities.h}}
+\doxysubsubsection{\texorpdfstring{GetEmptyNeighborsOfTile()}{GetEmptyNeighborsOfTile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Get\+Empty\+Neighbors\+Of\+Tile (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{tile }\end{DoxyParamCaption})}
+
+
+
+Get the emty neighbors of a tile. 
+
+Retrieves the neighboring tiles of the specified tile, that don\textquotesingle{}t have any Bug piece on them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em tile} & The coordinates of the tile for which neighbors are to be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the empty neighboring tiles of the specified tile. 
+\end{DoxyReturn}
+\Hypertarget{hex_utilities_8h_ae0a5e780120e2d5150b7385d51ed66f3}\label{hex_utilities_8h_ae0a5e780120e2d5150b7385d51ed66f3} 
+\index{hexUtilities.h@{hexUtilities.h}!GetNeighborsOfTile@{GetNeighborsOfTile}}
+\index{GetNeighborsOfTile@{GetNeighborsOfTile}!hexUtilities.h@{hexUtilities.h}}
+\doxysubsubsection{\texorpdfstring{GetNeighborsOfTile()}{GetNeighborsOfTile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Get\+Neighbors\+Of\+Tile (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{tile }\end{DoxyParamCaption})}
+
+
+
+Get the neighbors of a tile. 
+
+Retrieves the neighboring tiles of the specified tile.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em tile} & The coordinates of the tile for which neighbors are to be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the neighboring tiles of the specified tile. 
+\end{DoxyReturn}
+\Hypertarget{hex_utilities_8h_aaca1434cf37c454e9dca6513f75b9e1b}\label{hex_utilities_8h_aaca1434cf37c454e9dca6513f75b9e1b} 
+\index{hexUtilities.h@{hexUtilities.h}!GetOccupiedNeighborsOfTile@{GetOccupiedNeighborsOfTile}}
+\index{GetOccupiedNeighborsOfTile@{GetOccupiedNeighborsOfTile}!hexUtilities.h@{hexUtilities.h}}
+\doxysubsubsection{\texorpdfstring{GetOccupiedNeighborsOfTile()}{GetOccupiedNeighborsOfTile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Get\+Occupied\+Neighbors\+Of\+Tile (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{tile }\end{DoxyParamCaption})}
+
+
+
+Get the occupied neighbors of a tile. 
+
+Retrieves the neighboring tiles of the specified tile, that have Bug piece on them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em tile} & The coordinates of the tile for which neighbors are to be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the occupied neighboring tiles of the specified tile. 
+\end{DoxyReturn}
+\Hypertarget{hex_utilities_8h_a8e18609022ebed9ec69c330476d8843f}\label{hex_utilities_8h_a8e18609022ebed9ec69c330476d8843f} 
+\index{hexUtilities.h@{hexUtilities.h}!RoundAxial@{RoundAxial}}
+\index{RoundAxial@{RoundAxial}!hexUtilities.h@{hexUtilities.h}}
+\doxysubsubsection{\texorpdfstring{RoundAxial()}{RoundAxial()}}
+{\footnotesize\ttfamily Vector2 Round\+Axial (\begin{DoxyParamCaption}\item[{Vector2}]{axial\+Frac }\end{DoxyParamCaption})}
+
+
+
+Rounds the fractional axial coordinates to the nearest axial coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axial\+Frac} & The fractional axial coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The axial coordinates rounded to the nearest axial. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{hex_utilities_8h_a7ae02bc7d4b958330079b16a2971a350}\label{hex_utilities_8h_a7ae02bc7d4b958330079b16a2971a350} 
+\index{hexUtilities.h@{hexUtilities.h}!AXIAL\_DIRECTION\_VECTORS@{AXIAL\_DIRECTION\_VECTORS}}
+\index{AXIAL\_DIRECTION\_VECTORS@{AXIAL\_DIRECTION\_VECTORS}!hexUtilities.h@{hexUtilities.h}}
+\doxysubsubsection{\texorpdfstring{AXIAL\_DIRECTION\_VECTORS}{AXIAL\_DIRECTION\_VECTORS}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} AXIAL\+\_\+\+DIRECTION\+\_\+\+VECTORS\mbox{[}\mbox{\hyperlink{common_8h_af688b1e2aef35ec09a9c00a4c4ff31d4}{SIZE\+\_\+\+OF\+\_\+\+AXIAL\+\_\+\+VECTORS}}\mbox{]}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\ -\/1,\ 1\ \},\ }
+\DoxyCodeLine{\ \ \ \ \{\ 1,\ -\/1\ \},\ }
+\DoxyCodeLine{\ \ \ \ \{\ 1,\ 0\ \},\ }
+\DoxyCodeLine{\ \ \ \ \{\ -\/1,\ 0\ \},\ }
+\DoxyCodeLine{\ \ \ \ \{\ 0,\ -\/1\ \},\ }
+\DoxyCodeLine{\ \ \ \ \{\ 0,\ 1\ \}\ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Array of axial direction vectors. 
+
+Represents the axial direction vectors used in hexagonal grids. Each vector consists of two integers representing the q and r coordinates respectively. The array size is determined by the SIZE\+\_\+\+OF\+\_\+\+AXIAL\+\_\+\+VECTORS constant. 

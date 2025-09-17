@@ -1,0 +1,392 @@
+\doxysection{Base\+Bug\+Tile Class Reference}
+\hypertarget{class_base_bug_tile}{}\label{class_base_bug_tile}\index{BaseBugTile@{BaseBugTile}}
+
+
+Base class representing a bug tile in the game.  
+
+
+
+
+{\ttfamily \#include $<$bug\+Tiles.\+h$>$}
+
+Inheritance diagram for Base\+Bug\+Tile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_base_bug_tile}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_bug_tile_a961a2a9c008e9d9b74d2196af5a58f01}{Base\+Bug\+Tile}} (const int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}}, const Color color, const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_base_bug_tile}{Base\+Bug\+Tile} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_base_bug_tile_a85abaea5f923ef07feb230f514ce4995}{Base\+Bug\+Tile}} ()=delete
+\begin{DoxyCompactList}\small\item\em Deleted default constructor. \end{DoxyCompactList}\item 
+const Color \& \mbox{\hyperlink{class_base_bug_tile_a775d4e32edd60dadcc899949d5f12ffb}{Get\+Bug\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the Bug Color object. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_base_bug_tile_a6fa62549274b32765b93431151580cfd}{Get\+Player\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_player}{Player} ID object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \& \mbox{\hyperlink{class_base_bug_tile_a92313d77aa6ffacac607aa524a549287}{Get\+Bug\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the Bug Type object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a0e6ccf6da721b90ea10d742e53b8c924}{Move}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&original\+Cords)=0
+\begin{DoxyCompactList}\small\item\em Define rules for moving the bug tile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a8ffc587c75a51b063d481a6494dad063}{Place}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const int \&IDOf\+Player, const bool \&is\+Zero\+Turn=false)
+\begin{DoxyCompactList}\small\item\em Define rules for placing the bug tile. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_base_bug_tile_a90db1952d30b43b544eee34bf6dd5a89}{\texorpdfstring{$\sim$}{\string~}\+Base\+Bug\+Tile}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_base_bug_tile}{Base\+Bug\+Tile}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_ad25344e2000feb209197c6b3a84bdd14}{Spaces\+Surronded\+By\+Their\+Color}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+General\+Moves, const int \&IDOf\+Player)
+\begin{DoxyCompactList}\small\item\em Retrieves tiles with atleast one neighbor of same color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_a1b4c4299dd4299b026ece1863dca2d08}{Check\+Integrity\+Of\+Hive\+Without\+One\+Tile}} (\mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Removed\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks the integrity of the hive without one tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_ac58be7526d2048fb6fd6581b3b8dd33e}{Freedom\+To\+Move}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Removed\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks if the bug tile has freedom to move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_aa7fe73915fa896143949de902743f6ba}{Is\+Space\+Surrounded}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&cords\+Of\+Hex)
+\begin{DoxyCompactList}\small\item\em Checks if a tile is surrounded by tiles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \mbox{\hyperlink{class_base_bug_tile_a67694e6db79871dc8ad5e63330fcda35}{Remove\+Possible\+Moves\+Around\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Removes possible moves around a tile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \& \mbox{\hyperlink{class_base_bug_tile_a1cc91958c9996e3dec7a30f72341debf}{Remove\+Possible\+Moves\+Around\+Tile}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map, \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&possible\+Moves, const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&tile)
+\begin{DoxyCompactList}\small\item\em Removes possible moves around a tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_bug_tile_a232e1bc33321f410dbc42714ab6b12fa}{Is\+Map\+Clear}} (const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&game\+Map) const
+\begin{DoxyCompactList}\small\item\em Checks if the game map is clear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \mbox{\hyperlink{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}{type}}
+\item 
+Color \mbox{\hyperlink{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1}{bug\+Color}} = PINK
+\item 
+int \mbox{\hyperlink{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}{player\+Id}} = INT\+\_\+\+MAX
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing a bug tile in the game. 
+
+This class provides a base representation for a bug tile in the game. It includes methods for accessing properties of the bug tile and defining common behavior for all bug types. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_base_bug_tile_a961a2a9c008e9d9b74d2196af5a58f01}\label{class_base_bug_tile_a961a2a9c008e9d9b74d2196af5a58f01} 
+\index{BaseBugTile@{BaseBugTile}!BaseBugTile@{BaseBugTile}}
+\index{BaseBugTile@{BaseBugTile}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{BaseBugTile()}{BaseBugTile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Base\+Bug\+Tile\+::\+Base\+Bug\+Tile (\begin{DoxyParamCaption}\item[{const int}]{player\+Id,  }\item[{const Color}]{color,  }\item[{const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_base_bug_tile}{Base\+Bug\+Tile} object. 
+
+Constructs a \doxylink{class_base_bug_tile}{Base\+Bug\+Tile} object with the specified player ID, color, and bug type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Id} & The ID of the player owning the bug tile. \\
+\hline
+{\em color} & The color of the bug tile. \\
+\hline
+{\em type} & The type of bug represented by the tile. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_bug_tile_a85abaea5f923ef07feb230f514ce4995}\label{class_base_bug_tile_a85abaea5f923ef07feb230f514ce4995} 
+\index{BaseBugTile@{BaseBugTile}!BaseBugTile@{BaseBugTile}}
+\index{BaseBugTile@{BaseBugTile}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{BaseBugTile()}{BaseBugTile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Base\+Bug\+Tile\+::\+Base\+Bug\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Deleted default constructor. 
+
+The default constructor is deleted to prevent instantiation without required parameters. \Hypertarget{class_base_bug_tile_a90db1952d30b43b544eee34bf6dd5a89}\label{class_base_bug_tile_a90db1952d30b43b544eee34bf6dd5a89} 
+\index{BaseBugTile@{BaseBugTile}!````~BaseBugTile@{\texorpdfstring{$\sim$}{\string~}BaseBugTile}}
+\index{````~BaseBugTile@{\texorpdfstring{$\sim$}{\string~}BaseBugTile}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BaseBugTile()}{\string~BaseBugTile()}}
+{\footnotesize\ttfamily virtual Base\+Bug\+Tile\+::\texorpdfstring{$\sim$}{\string~}\+Base\+Bug\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \doxylink{class_base_bug_tile}{Base\+Bug\+Tile}. 
+
+Defines a virtual destructor to allow proper cleanup in derived classes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_base_bug_tile_a1b4c4299dd4299b026ece1863dca2d08}\label{class_base_bug_tile_a1b4c4299dd4299b026ece1863dca2d08} 
+\index{BaseBugTile@{BaseBugTile}!CheckIntegrityOfHiveWithoutOneTile@{CheckIntegrityOfHiveWithoutOneTile}}
+\index{CheckIntegrityOfHiveWithoutOneTile@{CheckIntegrityOfHiveWithoutOneTile}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{CheckIntegrityOfHiveWithoutOneTile()}{CheckIntegrityOfHiveWithoutOneTile()}}
+{\footnotesize\ttfamily bool Base\+Bug\+Tile\+::\+Check\+Integrity\+Of\+Hive\+Without\+One\+Tile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}}}]{map,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{cords\+Of\+Removed\+Hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks the integrity of the hive without one tile. 
+
+This function checks the integrity of the hive without considering one specific tile.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em cords\+Of\+Removed\+Hex} & The coordinates of the removed hex tile. Passed as copy intentionally. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the hive remains intact after removing the specified tile, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_ac58be7526d2048fb6fd6581b3b8dd33e}\label{class_base_bug_tile_ac58be7526d2048fb6fd6581b3b8dd33e} 
+\index{BaseBugTile@{BaseBugTile}!FreedomToMove@{FreedomToMove}}
+\index{FreedomToMove@{FreedomToMove}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{FreedomToMove()}{FreedomToMove()}}
+{\footnotesize\ttfamily bool Base\+Bug\+Tile\+::\+Freedom\+To\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{cords\+Of\+Removed\+Hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks if the bug tile has freedom to move. 
+
+This function checks if the bug tile isn\textquotesingle{}t surrounded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em cords\+Of\+Removed\+Hex} & The coordinates of the bug tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the bug tile has freedom to move, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_a775d4e32edd60dadcc899949d5f12ffb}\label{class_base_bug_tile_a775d4e32edd60dadcc899949d5f12ffb} 
+\index{BaseBugTile@{BaseBugTile}!GetBugColor@{GetBugColor}}
+\index{GetBugColor@{GetBugColor}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{GetBugColor()}{GetBugColor()}}
+{\footnotesize\ttfamily const Color \& Base\+Bug\+Tile\+::\+Get\+Bug\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Bug Color object. 
+
+\begin{DoxyReturn}{Returns}
+const Color\& 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_a92313d77aa6ffacac607aa524a549287}\label{class_base_bug_tile_a92313d77aa6ffacac607aa524a549287} 
+\index{BaseBugTile@{BaseBugTile}!GetBugType@{GetBugType}}
+\index{GetBugType@{GetBugType}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{GetBugType()}{GetBugType()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \& Base\+Bug\+Tile\+::\+Get\+Bug\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Bug Type object. 
+
+\begin{DoxyReturn}{Returns}
+const bug\+Type\& 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_a6fa62549274b32765b93431151580cfd}\label{class_base_bug_tile_a6fa62549274b32765b93431151580cfd} 
+\index{BaseBugTile@{BaseBugTile}!GetPlayerID@{GetPlayerID}}
+\index{GetPlayerID@{GetPlayerID}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{GetPlayerID()}{GetPlayerID()}}
+{\footnotesize\ttfamily const int \& Base\+Bug\+Tile\+::\+Get\+Player\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the \doxylink{class_player}{Player} ID object. 
+
+\begin{DoxyReturn}{Returns}
+const int\& 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_a232e1bc33321f410dbc42714ab6b12fa}\label{class_base_bug_tile_a232e1bc33321f410dbc42714ab6b12fa} 
+\index{BaseBugTile@{BaseBugTile}!IsMapClear@{IsMapClear}}
+\index{IsMapClear@{IsMapClear}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{IsMapClear()}{IsMapClear()}}
+{\footnotesize\ttfamily bool Base\+Bug\+Tile\+::\+Is\+Map\+Clear (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks if the game map is clear. 
+
+This function checks if the game map is clear, i.\+e., no bugs are present on the map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the game map is clear, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_aa7fe73915fa896143949de902743f6ba}\label{class_base_bug_tile_aa7fe73915fa896143949de902743f6ba} 
+\index{BaseBugTile@{BaseBugTile}!IsSpaceSurrounded@{IsSpaceSurrounded}}
+\index{IsSpaceSurrounded@{IsSpaceSurrounded}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{IsSpaceSurrounded()}{IsSpaceSurrounded()}}
+{\footnotesize\ttfamily bool Base\+Bug\+Tile\+::\+Is\+Space\+Surrounded (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{cords\+Of\+Hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks if a tile is surrounded by tiles. 
+
+This function checks if a space on the game map is surrounded by atleast 5 tiles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em cords\+Of\+Hex} & The coordinates of the space. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the space is surrounded by tiles, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_a0e6ccf6da721b90ea10d742e53b8c924}\label{class_base_bug_tile_a0e6ccf6da721b90ea10d742e53b8c924} 
+\index{BaseBugTile@{BaseBugTile}!Move@{Move}}
+\index{Move@{Move}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Base\+Bug\+Tile\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+General\+Moves,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{original\+Cords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Define rules for moving the bug tile. 
+
+This pure virtual function must be implemented by derived classes to define the specific movement rules of the bug tile. Base rules for all tiles is\+: The removal must not violate the integrity of the hive.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em possible\+General\+Moves} & The set of possible general moves. \\
+\hline
+{\em original\+Cords} & The original coordinates of the bug tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the possible moves for the tile. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_queen_bee_aa4343bec66890a0d2004bcb63d5d05cc}{Queen\+Bee}}, \mbox{\hyperlink{class_spider_a394bfbabefba38c74d372fade2731b8c}{Spider}}, \mbox{\hyperlink{class_beetle_a9402ccc5c161e136ea96db9dc5e96a7a}{Beetle}}, \mbox{\hyperlink{class_grass_hopper_af7a27395c732e1c44cc000084507404e}{Grass\+Hopper}}, and \mbox{\hyperlink{class_soldier_ant_a1030cd984faa15397accaa0e20a2737d}{Soldier\+Ant}}.
+
+\Hypertarget{class_base_bug_tile_a8ffc587c75a51b063d481a6494dad063}\label{class_base_bug_tile_a8ffc587c75a51b063d481a6494dad063} 
+\index{BaseBugTile@{BaseBugTile}!Place@{Place}}
+\index{Place@{Place}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{Place()}{Place()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Base\+Bug\+Tile\+::\+Place (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+General\+Moves,  }\item[{const int \&}]{IDOf\+Player,  }\item[{const bool \&}]{is\+Zero\+Turn = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Define rules for placing the bug tile. 
+
+This function return possible places to places the bug tile. It is called when bug tile is placed from player hand.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em possible\+General\+Moves} & The set of possible general moves. \\
+\hline
+{\em IDOf\+Player} & The ID of the player placing the bug tile. \\
+\hline
+{\em is\+Zero\+Turn} & Flag indicating if it\textquotesingle{}s the zero turn (optional, defaults to false). If set to true rule about placing near bug tile with same color doesn\textquotesingle{}t apply \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the possible places to place the tile 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_a67694e6db79871dc8ad5e63330fcda35}\label{class_base_bug_tile_a67694e6db79871dc8ad5e63330fcda35} 
+\index{BaseBugTile@{BaseBugTile}!RemovePossibleMovesAroundTile@{RemovePossibleMovesAroundTile}}
+\index{RemovePossibleMovesAroundTile@{RemovePossibleMovesAroundTile}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{RemovePossibleMovesAroundTile()}{RemovePossibleMovesAroundTile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Base\+Bug\+Tile\+::\+Remove\+Possible\+Moves\+Around\+Tile (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+Moves,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{tile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Removes possible moves around a tile. 
+
+This function removes possible moves around a specified tile from a set of possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em possible\+Moves} & The set of possible moves passed as const reference. \\
+\hline
+{\em tile} & The coordinates of the tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} representing the possible moves with moves around the tile removed. 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_a1cc91958c9996e3dec7a30f72341debf}\label{class_base_bug_tile_a1cc91958c9996e3dec7a30f72341debf} 
+\index{BaseBugTile@{BaseBugTile}!RemovePossibleMovesAroundTile@{RemovePossibleMovesAroundTile}}
+\index{RemovePossibleMovesAroundTile@{RemovePossibleMovesAroundTile}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{RemovePossibleMovesAroundTile()}{RemovePossibleMovesAroundTile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \& Base\+Bug\+Tile\+::\+Remove\+Possible\+Moves\+Around\+Tile (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+Moves,  }\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{tile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Removes possible moves around a tile. 
+
+This function removes possible moves around a specified tile from a set of possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em possible\+Moves} & The set of possible moves passed as reference. \\
+\hline
+{\em tile} & The coordinates of the tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the modified set of possible moves with moves around the tile removed. 
+\end{DoxyReturn}
+\Hypertarget{class_base_bug_tile_ad25344e2000feb209197c6b3a84bdd14}\label{class_base_bug_tile_ad25344e2000feb209197c6b3a84bdd14} 
+\index{BaseBugTile@{BaseBugTile}!SpacesSurrondedByTheirColor@{SpacesSurrondedByTheirColor}}
+\index{SpacesSurrondedByTheirColor@{SpacesSurrondedByTheirColor}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{SpacesSurrondedByTheirColor()}{SpacesSurrondedByTheirColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} Base\+Bug\+Tile\+::\+Spaces\+Surronded\+By\+Their\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hex\+Tile\+Map}} \&}]{game\+Map,  }\item[{const \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possible\+Moves\+Set}} \&}]{possible\+General\+Moves,  }\item[{const int \&}]{IDOf\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Retrieves tiles with atleast one neighbor of same color. 
+
+Retrieves tiles from possible\+General\+Moves with atleast one neighbor, that have same ID as IDOf\+Player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Map} & The game map represented as a hex\+Tile\+Map. \\
+\hline
+{\em possible\+General\+Moves} & The set of possible moves. \\
+\hline
+{\em IDOf\+Player} & The ID of the player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{struct_hex_cords}{Hex\+Cords} with atleast one neighbor of same color. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1}\label{class_base_bug_tile_af52efb4a6718ea355dfa4506e1587ac1} 
+\index{BaseBugTile@{BaseBugTile}!bugColor@{bugColor}}
+\index{bugColor@{bugColor}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{bugColor}{bugColor}}
+{\footnotesize\ttfamily Color Base\+Bug\+Tile\+::bug\+Color = PINK\hspace{0.3cm}{\ttfamily [protected]}}
+
+The color of the bug tile. \Hypertarget{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc}\label{class_base_bug_tile_a12b5e50abfc7f42270b06987324232cc} 
+\index{BaseBugTile@{BaseBugTile}!playerId@{playerId}}
+\index{playerId@{playerId}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{playerId}{playerId}}
+{\footnotesize\ttfamily int Base\+Bug\+Tile\+::player\+Id = INT\+\_\+\+MAX\hspace{0.3cm}{\ttfamily [protected]}}
+
+The ID of the player owning the bug tile. \Hypertarget{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c}\label{class_base_bug_tile_afe4f93f3fa6f246b7a1ddddbeecffe1c} 
+\index{BaseBugTile@{BaseBugTile}!type@{type}}
+\index{type@{type}!BaseBugTile@{BaseBugTile}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} Base\+Bug\+Tile\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+
+The type of bug represented by the tile. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/\mbox{\hyperlink{bug_tiles_8h}{bug\+Tiles.\+h}}\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/bug\+Tiles.\+cpp\end{DoxyCompactItemize}

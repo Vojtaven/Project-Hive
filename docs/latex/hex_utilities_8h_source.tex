@@ -1,0 +1,59 @@
+\doxysection{hex\+Utilities.\+h}
+\hypertarget{hex_utilities_8h_source}{}\label{hex_utilities_8h_source}\index{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/hexUtilities.h@{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/hexUtilities.h}}
+\mbox{\hyperlink{hex_utilities_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ hexUtilities\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ hexUtilities\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_8h}{common.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}raylib.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}raymath.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}rlgl.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hex_cords}{HexCords}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hex_cords_a83be3d7407e992f615d859efa84727eb}{q}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hex_cords_ad579017fabe061c669d34f203da9e27c}{r}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_hex_cords_a812edf9403e166e6b42681363396eb35}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\ \mbox{\hyperlink{struct_hex_cords_ac51689d2aa9e1594946b1a47a39a2067}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\ \mbox{\hyperlink{struct_hex_cords_a8630dc95507da3dde4bd31c7fbbdae1d}{operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ other);}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ Type\ Aliases}}
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_base_bug_tile}{BaseBugTile}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{using\ }\mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\ =\ std::map<HexCords,\ std::shared\_ptr<BaseBugTile>>;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{using\ }\mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ =\ std::set<HexCords>;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\ \mbox{\hyperlink{hex_utilities_8h_a7ae02bc7d4b958330079b16a2971a350}{AXIAL\_DIRECTION\_VECTORS}}[\mbox{\hyperlink{common_8h_af688b1e2aef35ec09a9c00a4c4ff31d4}{SIZE\_OF\_AXIAL\_VECTORS}}]\ =\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \{\ -\/1,\ 1\ \},\ }
+\DoxyCodeLine{00077\ \ \ \ \ \{\ 1,\ -\/1\ \},\ }
+\DoxyCodeLine{00078\ \ \ \ \ \{\ 1,\ 0\ \},\ }
+\DoxyCodeLine{00079\ \ \ \ \ \{\ -\/1,\ 0\ \},\ }
+\DoxyCodeLine{00080\ \ \ \ \ \{\ 0,\ -\/1\ \},\ }
+\DoxyCodeLine{00081\ \ \ \ \ \{\ 0,\ 1\ \}\ }
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00093\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{hex_utilities_8h_ae0a5e780120e2d5150b7385d51ed66f3}{GetNeighborsOfTile}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ tile);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00104\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{hex_utilities_8h_ae1b0f96a2087bb90a3622b8a94d11131}{GetEmptyNeighborsOfTile}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ tile);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00115\ \mbox{\hyperlink{hex_utilities_8h_a6daf0e556b6b3f59ab4400e3a71f665a}{possibleMovesSet}}\ \mbox{\hyperlink{hex_utilities_8h_aaca1434cf37c454e9dca6513f75b9e1b}{GetOccupiedNeighborsOfTile}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{hex_utilities_8h_ab857973120310a5d42b82b1495fae84e}{hexTileMap}}\&\ gameMap,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_hex_cords}{HexCords}}\&\ tile);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00123\ Vector3\ \mbox{\hyperlink{hex_utilities_8h_a95ddbbe9e577688b8d6e0513a1632479}{Cube\_round}}(Vector3\ frac);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00131\ Vector2\ \mbox{\hyperlink{hex_utilities_8h_a8d759d4a48d4d4c8204357a36b75b03d}{CubeToAxial}}(Vector3\ cube);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00139\ Vector3\ \mbox{\hyperlink{hex_utilities_8h_aff2c3e28b7113a6b1797cb9e19906560}{AxialToCube}}(Vector2\ axial);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00147\ Vector2\ \mbox{\hyperlink{hex_utilities_8h_a8e18609022ebed9ec69c330476d8843f}{RoundAxial}}(Vector2\ axialFrac);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

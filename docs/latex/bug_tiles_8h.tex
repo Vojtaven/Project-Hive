@@ -1,0 +1,97 @@
+\doxysection{D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/bug\+Tiles.h File Reference}
+\hypertarget{bug_tiles_8h}{}\label{bug_tiles_8h}\index{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/bugTiles.h@{D:/Vojta/Programovani/\_\_Cpp-\/zaklady/venzarv/project/src/bugTiles.h}}
+
+
+Contains classes for bug pieces and their functions.  
+
+
+{\ttfamily \#include "{}common.\+h"{}}\newline
+{\ttfamily \#include "{}hex\+Utilities.\+h"{}}\newline
+{\ttfamily \#include "{}raylib.\+h"{}}\newline
+{\ttfamily \#include "{}raymath.\+h"{}}\newline
+{\ttfamily \#include "{}rlgl.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_base_bug_tile}{Base\+Bug\+Tile}}
+\begin{DoxyCompactList}\small\item\em Base class representing a bug tile in the game. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_queen_bee}{Queen\+Bee}}
+\begin{DoxyCompactList}\small\item\em Represents a Queen Bee bug tile in the game. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_spider}{Spider}}
+\item 
+class \mbox{\hyperlink{class_beetle}{Beetle}}
+\item 
+class \mbox{\hyperlink{class_grass_hopper}{Grass\+Hopper}}
+\item 
+class \mbox{\hyperlink{class_soldier_ant}{Soldier\+Ant}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}} \{ \newline
+\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a42a0df0017ac2fee991da57be8adfb3a}{QUEEN\+\_\+\+BEE}}
+, \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a5947a2c004c7aee6dbfd803326a0fa5b}{BEETLE}}
+, \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a92a205a4d5fa78385fe7548e536ccf93}{SOLDIER\+\_\+\+ANT}}
+, \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a9e7abc16c6a1b9bcd2d330c63933d981}{SPIDER}}
+, \newline
+\mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246acd7c88584394c8cb200d5cd9f7925d92}{GRASS\+\_\+\+HOPPER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing types of bugs in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains classes for bug pieces and their functions. 
+
+\begin{DoxyAuthor}{Author}
+Vojtech Venzara (\href{mailto:Vojtaven@seznam.cz}{\texttt{ Vojtaven@seznam.\+cz}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/04-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}\label{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246} 
+\index{bugTiles.h@{bugTiles.h}!bugType@{bugType}}
+\index{bugType@{bugType}!bugTiles.h@{bugTiles.h}}
+\doxysubsubsection{\texorpdfstring{bugType}{bugType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246}{bug\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration representing types of bugs in the game. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUEEN\_BEE@{QUEEN\_BEE}!bugTiles.h@{bugTiles.h}}\index{bugTiles.h@{bugTiles.h}!QUEEN\_BEE@{QUEEN\_BEE}}}\Hypertarget{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a42a0df0017ac2fee991da57be8adfb3a}\label{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a42a0df0017ac2fee991da57be8adfb3a} 
+QUEEN\+\_\+\+BEE&Represents the Queen Bee bug type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BEETLE@{BEETLE}!bugTiles.h@{bugTiles.h}}\index{bugTiles.h@{bugTiles.h}!BEETLE@{BEETLE}}}\Hypertarget{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a5947a2c004c7aee6dbfd803326a0fa5b}\label{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a5947a2c004c7aee6dbfd803326a0fa5b} 
+BEETLE&Represents the \doxylink{class_beetle}{Beetle} bug type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOLDIER\_ANT@{SOLDIER\_ANT}!bugTiles.h@{bugTiles.h}}\index{bugTiles.h@{bugTiles.h}!SOLDIER\_ANT@{SOLDIER\_ANT}}}\Hypertarget{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a92a205a4d5fa78385fe7548e536ccf93}\label{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a92a205a4d5fa78385fe7548e536ccf93} 
+SOLDIER\+\_\+\+ANT&Represents the Soldier Ant bug type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPIDER@{SPIDER}!bugTiles.h@{bugTiles.h}}\index{bugTiles.h@{bugTiles.h}!SPIDER@{SPIDER}}}\Hypertarget{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a9e7abc16c6a1b9bcd2d330c63933d981}\label{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246a9e7abc16c6a1b9bcd2d330c63933d981} 
+SPIDER&Represents the \doxylink{class_spider}{Spider} bug type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GRASS\_HOPPER@{GRASS\_HOPPER}!bugTiles.h@{bugTiles.h}}\index{bugTiles.h@{bugTiles.h}!GRASS\_HOPPER@{GRASS\_HOPPER}}}\Hypertarget{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246acd7c88584394c8cb200d5cd9f7925d92}\label{bug_tiles_8h_adaefb99855d683ba40e91f4452d68246acd7c88584394c8cb200d5cd9f7925d92} 
+GRASS\+\_\+\+HOPPER&Represents the Grasshopper bug type. \\
+\hline
+
+\end{DoxyEnumFields}

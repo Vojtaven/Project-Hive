@@ -1,0 +1,108 @@
+\doxysection{Hex\+Cords Struct Reference}
+\hypertarget{struct_hex_cords}{}\label{struct_hex_cords}\index{HexCords@{HexCords}}
+
+
+Represents coordinates in a hexagonal grid. For cordinates we use the axial representation.  
+
+
+
+
+{\ttfamily \#include $<$hex\+Utilities.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_hex_cords_a812edf9403e166e6b42681363396eb35}{operator$<$}} (const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&other) const
+\begin{DoxyCompactList}\small\item\em Less-\/than comparison operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \mbox{\hyperlink{struct_hex_cords_ac51689d2aa9e1594946b1a47a39a2067}{operator+}} (const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&other) const
+\begin{DoxyCompactList}\small\item\em Addition operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \mbox{\hyperlink{struct_hex_cords_a8630dc95507da3dde4bd31c7fbbdae1d}{operator+=}} (const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&other)
+\begin{DoxyCompactList}\small\item\em Compound addition operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_hex_cords_a83be3d7407e992f615d859efa84727eb}{q}}
+\item 
+int \mbox{\hyperlink{struct_hex_cords_ad579017fabe061c669d34f203da9e27c}{r}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents coordinates in a hexagonal grid. For cordinates we use the axial representation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_hex_cords_ac51689d2aa9e1594946b1a47a39a2067}\label{struct_hex_cords_ac51689d2aa9e1594946b1a47a39a2067} 
+\index{HexCords@{HexCords}!operator+@{operator+}}
+\index{operator+@{operator+}!HexCords@{HexCords}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} Hex\+Cords\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Addition operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{struct_hex_cords}{Hex\+Cords} object to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the addition. 
+\end{DoxyReturn}
+\Hypertarget{struct_hex_cords_a8630dc95507da3dde4bd31c7fbbdae1d}\label{struct_hex_cords_a8630dc95507da3dde4bd31c7fbbdae1d} 
+\index{HexCords@{HexCords}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!HexCords@{HexCords}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} Hex\+Cords\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Compound addition operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{struct_hex_cords}{Hex\+Cords} object to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified \doxylink{struct_hex_cords}{Hex\+Cords} object. 
+\end{DoxyReturn}
+\Hypertarget{struct_hex_cords_a812edf9403e166e6b42681363396eb35}\label{struct_hex_cords_a812edf9403e166e6b42681363396eb35} 
+\index{HexCords@{HexCords}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!HexCords@{HexCords}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Hex\+Cords\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_hex_cords}{Hex\+Cords}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Less-\/than comparison operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{struct_hex_cords}{Hex\+Cords} object to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this object is less than the other object, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_hex_cords_a83be3d7407e992f615d859efa84727eb}\label{struct_hex_cords_a83be3d7407e992f615d859efa84727eb} 
+\index{HexCords@{HexCords}!q@{q}}
+\index{q@{q}!HexCords@{HexCords}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily int Hex\+Cords\+::q}
+
+Q component \Hypertarget{struct_hex_cords_ad579017fabe061c669d34f203da9e27c}\label{struct_hex_cords_ad579017fabe061c669d34f203da9e27c} 
+\index{HexCords@{HexCords}!r@{r}}
+\index{r@{r}!HexCords@{HexCords}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily int Hex\+Cords\+::r}
+
+R component 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/\mbox{\hyperlink{hex_utilities_8h}{hex\+Utilities.\+h}}\item 
+D\+:/\+Vojta/\+Programovani/\+\_\+\+\_\+\+Cpp-\/zaklady/venzarv/project/src/hex\+Utilities.\+cpp\end{DoxyCompactItemize}
